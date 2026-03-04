@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industri Nikkoplas Sdn. Bhd. | Precision Injection Molding</title>
+    <style>
+        :root {
+            --primary-blue: #005aab;
+            --dark-navy: #002b5c;
+            --light-bg: #f8fafc;
+            --text-main: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 50px; width: auto; }
+        .logo-text { font-size: 1.4rem; font-weight: 800; color: var(--dark-navy); text-transform: uppercase; }
+        .logo-text span { color: var(--primary-blue); }
+
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.85rem; transition: 0.3s; }
+        nav a:hover { color: var(--primary-blue); }
+
+        .hero {
+            background-color: var(--dark-navy);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--primary-blue);
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero h1 span { color: #4da3ff; }
+        .hero p { font-size: 1.25rem; max-width: 700px; margin: 20px auto; color: #cbd5e1; }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            background: var(--light-bg);
+            padding: 2rem 3rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .spec-value { display: block; font-size: 1.5rem; font-weight: 800; color: var(--primary-blue); }
+        .spec-label { font-size: 0.75rem; text-transform: uppercase; color: #64748b; }
+
+        section { padding: 80px 3rem; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2rem; color: var(--dark-navy); text-transform: uppercase; }
+        .section-title div { width: 50px; height: 4px; background: var(--primary-blue); margin: 10px auto; }
+
+        .standard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .img-container {
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+
+        .img-container img { width: 100%; height: auto; display: block; }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .map-box { width: 100%; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+
+        input, textarea { width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 6px; box-sizing: border-box; background: var(--light-bg); margin-bottom: 15px; font-family: inherit; }
+        .btn { background: var(--primary-blue); color: white; padding: 18px; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; }
+        .btn:hover { background: var(--dark-navy); }
+
+        footer { background: var(--dark-navy); color: #94a3b8; padding: 40px; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .standard-grid, .contact-container { grid-template-columns: 1fr; }
+            header { padding: 1rem; flex-direction: column; gap: 10px; }
+            section { padding: 60px 1.5rem; }
+            #about .about-flex { flex-direction: column !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="factorylogo.png" alt="Logo" class="logo-img">
+            <div class="logo-text"><span>Industri</span> Nikkoplas</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Facility</a></li>
+                <li><a href="#contact">Inquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1><span>Precision</span> Manufacturing Excellence</h1>
+            <p>Your strategic partner in high-performance plastic injection molding solutions.</p>
+        </section>
+
+        <div class="specs-grid">
+            <div class="spec-item"><span class="spec-value">ISO 9001</span><span class="spec-label">Certified Quality</span></div>
+            <div class="spec-item"><span class="spec-value">±0.05mm</span><span class="spec-label">Engineering Precision</span></div>
+            <div class="spec-item"><span class="spec-value">24 / 7</span><span class="spec-label">Operating Capacity</span></div>
+            <div class="spec-item"><span class="spec-value">100%</span><span class="spec-label">Visual & Lab QC</span></div>
+        </div>
+
+        <section id="about">
+            <div class="section-title"><h2>About Industri Nikkoplas</h2><div></div></div>
+            <div class="about-flex" style="max-width: 1100px; margin: 0 auto; display: flex; gap: 60px; align-items: flex-start;">
+                <div style="flex: 1.2;">
+                    <h3 style="color: var(--primary-blue); margin-top: 0;">A Legacy of Precision in Johor Bahru</h3>
+                    <p>Established as a cornerstone of the <strong>Tampoi Industrial Estate</strong>, Industri Nikkoplas Sdn. Bhd. has spent decades refining the art of plastic injection molding. We have evolved from a local manufacturer into a critical link in the global supply chain for the <strong>electronics, telecommunications, and mechanical engineering</strong> sectors.</p>
+                    
+                    <p>Our philosophy is built on the <strong>Zero-Defect</strong> principle. By integrating advanced molding technology with a highly skilled Malaysian workforce, we deliver components that meet the rigorous standards of multinational corporations across Asia and Europe.</p>
+                    
+                    <p>Strategically located near the Johor-Singapore Causeway, we offer unparalleled logistical advantages, ensuring that high-precision parts reach our clients with minimal lead times and maximum reliability.</p>
+                </div>
+                
+                <div style="flex: 0.8; background: var(--light-bg); padding: 40px; border-radius: 15px; border-top: 6px solid var(--primary-blue);">
+                    <h4 style="margin-top: 0; color: var(--dark-navy); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Core Competencies</h4>
+                    <ul style="padding-left: 20px; font-size: 0.95rem; color: var(--text-main);">
+                        <li style="margin-bottom: 12px;"><strong>High-Tolerance Molding:</strong> Specializing in complex geometries and thin-wall components.</li>
+                        <li style="margin-bottom: 12px;"><strong>Advanced Materials:</strong> Expertise in engineering plastics (ABS, PC, PBT, PPS).</li>
+                        <li style="margin-bottom: 12px;"><strong>Tooling Maintenance:</strong> In-house mold servicing to ensure production consistency.</li>
+                        <li style="margin-bottom: 12px;"><strong>Quality Assurance:</strong> Equipped with coordinate measuring machines (CMM) for verification.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" style="background: var(--light-bg);">
+            <div class="section-title"><h2>Product & Quality Assurance</h2><div></div></div>
+            <div class="standard-grid">
+                <div class="img-container"><img src="products.png" alt="Components"></div>
+                <div class="img-container"><img src="gallery2.png" alt="QC Laboratory"></div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="section-title"><h2>Production & Logistics</h2><div></div></div>
+            <div class="standard-grid">
+                <div class="img-container"><img src="gallery1.png" alt="Molding Floor"></div>
+                <div class="img-container"><img src="gallery3.png" alt="Logistics"></div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--light-bg);">
+            <div class="section-title"><h2>Locate Us & Inquiry</h2><div></div></div>
+            <div class="contact-container">
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.461019672727!2d103.7126!3d1.4939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da139513369ba9%3A0xaa14d7942eb8b7d8!2sNIKKOPLAS!5e0!3m2!1sen!2smy!4v1670000000000!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <h3 style="margin-top:0; color: var(--dark-navy);">Request a Technical Quote</h3>
+                    <form action="https://formspree.io/f/jeffwong@nikkoplas.com" method="POST">
+                        <input type="text" name="name" placeholder="Contact Name" required>
+                        <input type="email" name="email" placeholder="Business Email" required>
+                        <textarea name="message" rows="5" placeholder="Project details, material type, and estimated volume..." required></textarea>
+                        <button type="submit" class="btn">SUBMIT INQUIRY</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Industri Nikkoplas Sdn. Bhd. | Tampoi Industrial Estate, Johor Bahru, Malaysia
+    </footer>
+
+</body>
+</html>
