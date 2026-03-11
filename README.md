@@ -1,1 +1,1 @@
-# www.industrinikkoplas.com
+# industrinikkoplas.com
