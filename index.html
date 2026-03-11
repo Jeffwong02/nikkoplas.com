@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Industri Nikkoplas Sdn. Bhd. | Precision Injection Molding Johor Bahru</title>
-    <meta name="description" content="Industri Nikkoplas Sdn. Bhd. specializes in high-quality precision injection molding and engineering plastics in Johor Bahru. ISO 9001 & ISO 14001 certified.">
     
     <style>
         :root {
@@ -15,6 +13,7 @@
             --whatsapp: #25D366;
             --text: #1e293b;
             --header-text: #000000;
+            --bg-light: #f8fafc;
         }
 
         body {
@@ -30,81 +29,65 @@
             border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 1000;
         }
         .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
-        /* Adjusted height for better visibility */
-        .logo-img { height: 60px; width: auto; object-fit: contain; display: block; }
+        .logo-img { height: 60px; width: auto; }
         .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--header-text); text-transform: uppercase; margin: 0; }
         
         nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
         nav a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
-        .cta-btn { background: var(--primary); color: white !important; padding: 10px 22px; border-radius: 4px; border: none; font-weight: 700; cursor: pointer; text-decoration: none; transition: 0.3s; }
+        .cta-btn { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 4px; border: none; font-weight: 700; cursor: pointer; text-decoration: none; transition: 0.3s; display: inline-block; text-align: center; }
 
-        /* HERO & STATS */
+        /* HERO & MISSION */
         .hero {
             background: linear-gradient(rgba(0,43,92,0.85), rgba(0,43,92,0.85)), url('Factory-outerview.png');
             background-size: cover; background-position: center;
-            color: white; padding: 120px 5%; text-align: center;
+            color: white; padding: 140px 5%; text-align: center;
         }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
-        .slogan { font-size: 1.2rem; font-weight: 600; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; display: block; margin-top: 15px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .slogan { font-size: 1.2rem; font-weight: 600; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; display: block; margin: 15px 0 40px; }
 
-        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; background: white; padding: 40px 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; z-index: 10; margin-top: -50px; border-radius: 12px; max-width: 1100px; margin: 0 auto; }
-        .stat-item { text-align: center; min-width: 200px; padding: 10px; }
-        .stat-item b { display: block; font-size: 2.4rem; color: var(--primary); line-height: 1; margin-bottom: 5px; }
-        .stat-item span { text-transform: uppercase; font-size: 0.8rem; font-weight: 700; color: #64748b; letter-spacing: 1px; }
-
-        /* SECTIONS */
-        section { padding: 80px 5%; }
+        section { padding: 90px 5%; }
         .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 10px; }
+        .section-header h2 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
         .divider { width: 70px; height: 5px; background: var(--primary); margin: 0 auto; border-radius: 10px; }
 
-        /* SERVICES & EXPERTISE GRID */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: #ffffff; padding: 35px; border-radius: 12px; border: 1px solid #e2e8f0; transition: 0.3s; }
-        .service-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .service-card h3 { color: var(--secondary); margin-top: 0; font-size: 1.25rem; }
-        .service-card ul { padding-left: 20px; margin-bottom: 0; }
-        .service-card li { margin-bottom: 8px; font-weight: 500; }
+        /* HISTORY */
+        .history-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .history-item { padding: 20px; border-left: 2px solid var(--primary); background: var(--bg-light); transition: 0.3s; }
+        .history-item h4 { color: var(--primary); font-size: 1.5rem; margin: 0; }
 
-        /* POLICY & COMPLIANCE */
-        .policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .policy-card { background: #f8fafc; padding: 35px; border-radius: 12px; border-top: 5px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .iso-tag { display: inline-block; background: var(--secondary); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; }
+        /* CORE EXPERTISE */
+        .expertise-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .expertise-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; position: relative; transition: 0.4s; }
+        .expertise-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--primary); }
+        .expertise-card h3 { color: var(--secondary); margin-top: 0; font-size: 1.3rem; }
 
-        /* PORTFOLIO */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; max-width: 1200px; margin: 0 auto; }
-        .portfolio-card { border-radius: 15px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.06); background: #fff; text-align: center; }
-        .portfolio-card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 4px solid var(--primary); cursor: pointer; transition: 0.3s; }
+        /* PORTFOLIO & LIGHTBOX */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .portfolio-card { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.06); background: #fff; cursor: pointer; transition: 0.3s; border: 1px solid #eee; }
+        .portfolio-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+        #lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: pointer; }
+        #lightbox img { max-width: 90%; max-height: 85%; border: 4px solid white; border-radius: 4px; }
 
-        /* MACHINERY TABLE */
-        .machine-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        table { width: 100%; border-collapse: collapse; }
-        th { background: var(--secondary); color: white; padding: 20px; text-transform: uppercase; font-size: 0.9rem; }
-        td { padding: 18px; border-bottom: 1px solid #f1f5f9; text-align: center; font-weight: 500; }
+        /* MACHINERY */
+        .table-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; text-align: center; }
+        th { background: var(--secondary); color: white; padding: 20px; }
+        td { padding: 18px; border-bottom: 1px solid #f1f5f9; font-weight: 600; }
 
-        /* CONTACT & MAP */
+        /* CONTACT FORM & DROPDOWN */
         .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; max-width: 1200px; margin: 0 auto; }
         .pic-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid var(--primary); display: flex; justify-content: space-between; align-items: center; }
-        .pic-link { color: var(--primary); text-decoration: none; font-weight: 800; font-size: 1.1rem; }
+        .map-wrapper { width: 100%; height: 400px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 25px; }
         
-        .map-wrapper { width: 100%; height: 450px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        
-        .contact-form { background: #ffffff; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 5px; color: var(--secondary); }
-        .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 1rem; box-sizing: border-box; }
+        .form-input, .form-select {
+            width: 100%; padding: 14px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 0.95rem; box-sizing: border-box;
+        }
+        .form-select { background-color: white; cursor: pointer; }
 
-        /* FOOTER & WHATSAPP */
+        /* FOOTER */
         footer { background: var(--secondary); color: white; padding: 60px 5% 40px; text-align: center; border-top: 6px solid var(--primary); }
-        .iso-badge-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
-        .iso-badge { background: #fff; color: #000; padding: 8px 15px; border-radius: 4px; font-weight: 800; font-size: 0.8rem; border: 1px solid #ddd; }
-        .ssm-no { display: block; margin-top: 5px; font-size: 0.9rem; opacity: 0.8; letter-spacing: 1px; }
-        .whatsapp-float { position: fixed; bottom: 35px; right: 35px; background: var(--whatsapp); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); font-weight: bold; }
-
-        /* MODAL */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center; }
-        .modal-content { max-width: 90%; max-height: 90%; border-radius: 8px; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; font-weight: bold; }
 
         @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; } nav ul { display: none; } }
     </style>
@@ -118,171 +101,140 @@
         </a>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#about">History</a></li>
+                <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#machinery">Machinery</a></li>
-                <li><a href="#contact" class="cta-btn">Inquiry</a></li>
+                <li><a href="#contact" class="cta-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section id="about" class="hero">
             <h1>Precision Injection Molding Specialists</h1>
             <span class="slogan">Reliable Quality • Timely Delivery • Competitive Cost</span>
-        </section>
-
-        <div class="stats">
-            <div class="stat-item"><b>38+ Years</b><span>Heritage (Since 1988)</span></div>
-            <div class="stat-item"><b>28 Units</b><span>Injection Fleet</span></div>
-            <div class="stat-item"><b>Dual ISO</b><span>9001 & 14001</span></div>
-        </div>
-
-        <section id="about">
-            <div class="section-header"><h2>Technical Excellence Since 1988</h2><div class="divider"></div></div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 70px; max-width: 1200px; margin: 0 auto; align-items: center;">
-                <div>
-                    <p>Industri Nikkoplas Sdn. Bhd. is a leading provider of engineering plastic solutions in Johor Bahru. We specialize in complex molding for high-performance materials including PBT, PET, and High-Grade PC.</p>
-                    <div style="background: #f1f5f9; padding: 35px; border-left: 6px solid var(--primary); margin: 35px 0; border-radius: 4px;">
-                        <div style="font-style: italic; font-size: 1.15rem; color: var(--secondary); font-weight: 500;">"To develop a superior quality orientation and provide strategic resources to surpass beyond customer's needs and requirement."</div>
-                    </div>
-                </div>
-                <div>
-                    <img src="Injection-molding-factory-johor.png" alt="Factory" style="width: 100%; border-radius: 20px; box-shadow: 15px 15px 40px rgba(0,0,0,0.1);">
-                </div>
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 12px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);">
+                <h2 style="color: var(--accent);">OUR MISSION</h2>
+                <p style="font-size: 1.2rem;">To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners.</p>
             </div>
         </section>
 
-        <section id="services" style="background: #f8fafc;">
-            <div class="section-header"><h2>Our Expertise & Services</h2><div class="divider"></div></div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Core Services</h3>
-                    <ul>
-                        <li>Precision Plastic Injection Molding</li>
-                        <li>Engineering Plastic Specialty (PBT, PET, PC)</li>
-                        <li>Custom Mold Fabrication Support</li>
-                        <li>Product Design Consultation</li>
-                    </ul>
-                </div>
-                <div class="service-card">
+        <section style="background: var(--bg-light); padding: 50px 5%;">
+            <div class="section-header"><h2>Our History & Success</h2><div class="divider"></div></div>
+            <div class="history-grid">
+                <div class="history-item"><h4>1988</h4><p>Established in Johor Bahru</p></div>
+                <div class="history-item"><h4>35+ Yrs</h4><p>Industry Leadership</p></div>
+                <div class="history-item"><h4>1,000+</h4><p>Successful Projects</p></div>
+                <div class="history-item"><h4>Global</h4><p>MNC Client Partnerships</p></div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <div class="section-header"><h2>Core Expertise</h2><div class="divider"></div></div>
+            <div class="expertise-container">
+                <div class="expertise-card">
                     <h3>Secondary Processes</h3>
-                    <ul>
-                        <li>Hot Stamping & Silk Screen Printing</li>
-                        <li>Ultrasonic Welding & Assembly</li>
-                        <li>Industrial Spray Painting</li>
-                        <li>Quality Inspection & Testing</li>
-                    </ul>
+                    <p>Comprehensive finishing services including <b>Silk Screen Printing</b>, high-quality <b>Spray Painting</b>, and <b>Hot Stamping</b> for detailed branding and technical aesthetics.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Technical Expertise</h3>
-                    <ul>
-                        <li>Mastery of Complex Thin-Wall Molding</li>
-                        <li>High-Tolerance Component Production</li>
-                        <li>Material Grade Optimization</li>
-                        <li>Fast-Track Tooling & Prototyping</li>
-                    </ul>
+                <div class="expertise-card">
+                    <h3>Engineering Resins</h3>
+                    <p>Expert processing of high-grade engineering plastics such as PBT, PET, PC, and glass-filled Polyamides tailored for electronics and industrial use.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>High Capacity Output</h3>
+                    <p>Proven operational efficiency maintaining high-volume consistency with production line outputs of up to 650 pieces per hour.</p>
                 </div>
             </div>
         </section>
 
-        <section id="compliance">
-            <div class="section-header"><h2>Sustainability & Compliance</h2><div class="divider"></div></div>
-            <div class="policy-grid">
-                <div class="policy-card">
-                    <span class="iso-tag">ISO 14001:2015</span>
-                    <h3>Environment Policy</h3>
-                    <p>We implement energy-efficient production cycles and waste reduction protocols. Our operations are designed to minimize environmental impact while maintaining precision manufacturing standards.</p>
-                </div>
-                <div class="policy-card">
-                    <span class="iso-tag">ISO 9001:2015</span>
-                    <h3>CSR & Quality Compliance</h3>
-                    <p>We prioritize safe working environments, ethical labor practices, and a strict Quality Management System to ensure zero-defect manufacturing for our global clientele.</p>
-                </div>
+        <section id="csr" style="background: var(--bg-light);">
+            <div class="section-header"><h2>CSR & Sustainability</h2><div class="divider"></div></div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; color: #475569;">
+                <p>ISO 14001 Certified: We integrate energy-efficient molding and waste reduction to protect the environment and support the local Johor Bahru industrial community.</p>
             </div>
         </section>
 
-        <section id="portfolio" style="background: #f8fafc;">
-            <div class="section-header"><h2>Product Portfolio</h2><div class="divider"></div></div>
+        <section id="portfolio">
+            <div class="section-header"><h2>Portfolio</h2><p>(Click images to enlarge)</p><div class="divider"></div></div>
             <div class="portfolio-grid">
-                <div class="portfolio-card"><img src="mini-steamer-product-line.jpeg" onclick="openLightbox(this.src)"><div style="padding:20px;"><h3>Consumer Electronics</h3></div></div>
-                <div class="portfolio-card"><img src="precision-plastic-molded-parts2.png" onclick="openLightbox(this.src)"><div style="padding:20px;"><h3>Engineering Parts</h3></div></div>
-                <div class="portfolio-card"><img src="precision-plastic-molded-parts.jpeg" onclick="openLightbox(this.src)"><div style="padding:20px;"><h3>Industrial Parts</h3></div></div>
+                <div class="portfolio-card" onclick="openLightbox(this)"><img src="mini-steamer-product-line.jpeg" alt="Consumer Electronics"><div style="padding:15px; text-align:center;"><h3>Consumer Electronics</h3></div></div>
+                <div class="portfolio-card" onclick="openLightbox(this)"><img src="precision-plastic-molded-parts2.png" alt="Engineering Components"><div style="padding:15px; text-align:center;"><h3>Engineering Parts</h3></div></div>
+                <div class="portfolio-card" onclick="openLightbox(this)"><img src="precision-plastic-molded-parts.jpeg" alt="Industrial Applications"><div style="padding:15px; text-align:center;"><h3>Industrial Applications</h3></div></div>
+                <div class="portfolio-card" onclick="openLightbox(this)"><img src="Injection-molding-factory-johor.png" alt="Production Site"><div style="padding:15px; text-align:center;"><h3>Our Production Site</h3></div></div>
             </div>
         </section>
 
-        <section id="machinery">
-            <div class="section-header"><h2>Machinery Fleet Capacity</h2><div class="divider"></div></div>
-            <div class="machine-container">
+        <section id="machinery" style="background: var(--bg-light);">
+            <div class="section-header"><h2>Machinery Fleet</h2><div class="divider"></div></div>
+            <div class="table-container">
                 <table>
-                    <thead><tr><th>Category</th><th>Tonnage Range</th><th>Total Units</th></tr></thead>
+                    <thead><tr><th>Category</th><th>Tonnage</th><th>Units</th></tr></thead>
                     <tbody>
                         <tr><td>Precision Micro</td><td>50T - 100T</td><td>5</td></tr>
-                        <tr><td>Mid-Range Standard</td><td>120T - 250T</td><td>12</td></tr>
-                        <tr><td>Large Capacity</td><td>260T - 450T</td><td>11</td></tr>
+                        <tr><td>Mid-Range Industrial</td><td>120T - 250T</td><td>12</td></tr>
+                        <tr><td>Large Format Capacity</td><td>260T - 450T</td><td>11</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
         <section id="contact">
-            <div class="section-header"><h2>Contact & Factory Location</h2><div class="divider"></div></div>
+            <div class="section-header"><h2>Location & Contact</h2><div class="divider"></div></div>
             <div class="contact-grid">
                 <div>
-                    <h3>Direct Inquiries</h3>
-                    <div class="pic-box"><h4>Mr. Wong</h4><a href="tel:60167602667" class="pic-link">016-760 2667</a></div>
-                    <div class="pic-box"><h4>Ms. Tee</h4><a href="tel:60127863813" class="pic-link">012-786 3813</a></div>
-                    
-                    <p style="margin-bottom: 5px;"><strong>Industri Nikkoplas Sdn. Bhd.</strong></p>
-                    <p style="margin-top: 0; color: #64748b;">No 2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi,<br>81200 Johor Bahru, Johor.</p>
-                    
+                    <div class="pic-box"><h4>Mr. Wong</h4><a href="tel:60167602667" style="color:var(--primary); font-weight:800; text-decoration:none;">016-760 2667</a></div>
+                    <div class="pic-box"><h4>Ms. Tee</h4><a href="tel:60127863813" style="color:var(--primary); font-weight:800; text-decoration:none;">012-786 3813</a></div>
+                    <address style="font-style: normal; margin-top:20px; color: #64748b;">
+                        2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi,<br>
+                        81200 Johor Bahru, Johor, Malaysia.
+                    </address>
                     <div class="map-wrapper">
-                        <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4239828552393!2d103.73177897452654!3d1.5144883984711385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6e9494481023%3A0xc3f173b27b3d321!2sIndustri%20Nikkoplas%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy">
-                        </iframe>
+                        <iframe width="100%" height="100%" style="border:0" loading="lazy" src="https://www.google.com/maps/contrib/101770642417645803269/reviews8"></iframe>
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <h3>Request for Quotation</h3>
+                <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                    <h3>Send an Inquiry</h3>
                     <form action="https://formspree.io/f/xvzbeqvd" method="POST">
-                        <div class="form-group">
-                            <label>Selection</label>
-                            <select name="subject" required>
-                                <option value="" disabled selected>Please select...</option>
-                                <option value="Request for Quotation">Request for Quotation (RFQ)</option>
-                                <option value="Request a Site Visit">Request a Site Visit</option>
-                                <option value="Technical Consultation">Technical Consultation</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group"><input type="text" name="name" placeholder="Contact Person / Company Name" required></div>
-                        <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
-                        <div class="form-group"><textarea name="message" rows="5" placeholder="Requirement details & specifications..." required></textarea></div>
-                        <button type="submit" class="cta-btn" style="width:100%; padding:18px;">SUBMIT ENQUIRY</button>
+                        <input type="text" name="name" placeholder="Full Name" class="form-input" required>
+                        <input type="email" name="email" placeholder="Business Email" class="form-input" required>
+                        
+                        <select name="reason" class="form-select" required>
+                            <option value="" disabled selected>Select Inquiry Reason</option>
+                            <option value="RFQ / New Project">Request for Quotation (RFQ)</option>
+                            <option value="Production Support">Production Support</option>
+                            <option value="Career Application">Career / Job Application</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+
+                        <textarea name="message" rows="5" placeholder="Tell us about your requirements..." class="form-input" required></textarea>
+                        <button type="submit" class="cta-btn" style="width:100%;">SUBMIT MESSAGE</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="lightbox" class="modal" onclick="this.style.display='none'"><span class="close-modal" style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;">×</span><img class="modal-content" id="lightboxImg"></div>
-
     <footer>
-        <div class="iso-badge-container">
-            <div class="iso-badge">ISO 9001:2015</div>
-            <div class="iso-badge">ISO 14001:2015</div>
-        </div>
-        <p><strong>Industri Nikkoplas Sdn. Bhd.</strong></p>
-        <span class="ssm-no">SSM NO: 169818-D</span>
-        <p style="margin-top:20px; font-size:0.8rem; opacity:0.6;">© 2026 Industri Nikkoplas Sdn. Bhd. All Rights Reserved.</p>
+        <p><strong>Industri Nikkoplas Sdn. Bhd.</strong> (169818-D)</p>
+        <p style="font-size:0.85rem; opacity:0.7;">ISO 9001:2015 & ISO 14001:2015 Certified Manufacturing Facility</p>
+        <p style="margin-top:25px; font-size:0.75rem; opacity:0.5;">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
     </footer>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <span style="position:absolute; top:20px; right:40px; color:white; font-size:50px; font-weight:bold;">×</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function openLightbox(card) {
+            document.getElementById('lightbox-img').src = card.querySelector('img').src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+    </script>
 
     <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank">WA</a>
 
-    <script>
-        function openLightbox(src) { document.getElementById('lightbox').style.display='flex'; document.getElementById('lightboxImg').src=src; }
-    </script>
 </body>
 </html>
