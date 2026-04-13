@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industri Nikkoplas Sdn. Bhd. | Plastic Injection Molding Johor Bahru</title>
+    <meta name="description" content="Industri Nikkoplas Sdn. Bhd. provides ISO-certified precision plastic injection molding services in Johor Bahru. Specializing in PS, ABS, and PC resin components.">
+    <meta name="keywords" content="Plastic Injection Molding, Johor Bahru, Industri Nikkoplas, Manufacturing Malaysia, Precision Plastic">
     
     <style>
         :root {
@@ -32,10 +34,12 @@
         .logo-img { height: 60px; width: auto; }
         .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--header-text); text-transform: uppercase; margin: 0; }
         
-        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; align-items: center; }
         nav a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
+        
         .cta-btn { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 4px; border: none; font-weight: 700; cursor: pointer; text-decoration: none; transition: 0.3s; display: inline-block; text-align: center; }
+        .cta-btn:hover { background: var(--secondary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 
         /* HERO & MISSION */
         .hero {
@@ -43,15 +47,14 @@
             background-size: cover; background-position: center;
             color: white; padding: 140px 5%; text-align: center;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .slogan { font-size: 1.2rem; font-weight: 600; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; display: block; margin: 15px 0 40px; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 10px; }
+        .slogan { font-size: 1.1rem; font-weight: 600; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; display: block; margin: 15px 0 40px; }
 
         section { padding: 90px 5%; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
         .divider { width: 70px; height: 5px; background: var(--primary); margin: 0 auto; border-radius: 10px; }
 
-        /* ISO HIGHLIGHT */
         .iso-badge { display: inline-block; background: var(--primary); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 800; margin-bottom: 25px; font-size: 0.9rem; letter-spacing: 1px; }
 
         /* HISTORY */
@@ -59,22 +62,31 @@
         .history-item { padding: 20px; border-left: 2px solid var(--primary); background: var(--bg-light); transition: 0.3s; }
         .history-item h4 { color: var(--primary); font-size: 1.5rem; margin: 0; }
 
+        /* CLIENTS SECTION */
+        .client-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .client-logo { width: 200px; height: 100px; object-fit: contain; filter: grayscale(100%); transition: 0.4s; opacity: 0.7; }
+        .client-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+        .more-clients { font-weight: 700; color: #94a3b8; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+
         /* CORE EXPERTISE */
         .expertise-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .expertise-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; position: relative; transition: 0.4s; }
+        .expertise-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .expertise-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--primary); }
         .expertise-card h3 { color: var(--secondary); margin-top: 0; font-size: 1.3rem; }
 
         /* PORTFOLIO & LIGHTBOX */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .portfolio-card { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.06); background: #fff; cursor: pointer; transition: 0.3s; border: 1px solid #eee; }
+        .portfolio-card:hover { transform: scale(1.02); }
         .portfolio-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
+        
         #lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: pointer; }
         #lightbox img { max-width: 90%; max-height: 85%; border: 4px solid white; border-radius: 4px; }
 
         /* MACHINERY */
-        .table-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
-        table { width: 100%; border-collapse: collapse; text-align: center; }
+        .table-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; overflow-x: auto; border: 1px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; text-align: center; min-width: 500px; }
         th { background: var(--secondary); color: white; padding: 20px; }
         td { padding: 18px; border-bottom: 1px solid #f1f5f9; font-weight: 600; }
 
@@ -86,9 +98,23 @@
 
         /* FOOTER */
         footer { background: var(--secondary); color: white; padding: 60px 5% 40px; text-align: center; border-top: 6px solid var(--primary); }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; font-weight: bold; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); background: #128C7E; }
 
-        @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; } nav ul { display: none; } }
+        @media (max-width: 992px) { 
+            .contact-grid { grid-template-columns: 1fr; } 
+            nav ul { gap: 10px; }
+            nav a { font-size: 0.75rem; }
+            .logo-text { font-size: 1.1rem; }
+            .logo-img { height: 45px; }
+        }
+        
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .hero { padding: 80px 5%; }
+            .client-logo { width: 150px; }
+        }
     </style>
 </head>
 <body>
@@ -112,11 +138,11 @@
     <main>
         <section id="about" class="hero">
             <div class="iso-badge">ISO 9001:2015 & 14001:2015 CERTIFIED</div>
-            <h1>Plastic Injection Molding Specialists</h1>
+            <h1>Precision Injection Molding Specialists</h1>
             <span class="slogan">Reliable Quality • Timely Delivery • Competitive Cost</span>
             <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 12px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);">
-                <h2 style="color: var(--accent);">OUR MISSION</h2>
-                <p style="font-size: 1.2rem;">To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners.</p>
+                <h2 style="color: var(--accent); margin-top:0;">OUR MISSION</h2>
+                <p style="font-size: 1.2rem; margin-bottom:0;">To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners.</p>
             </div>
         </section>
 
@@ -130,7 +156,17 @@
             </div>
         </section>
 
-        <section id="expertise">
+        <section id="clients">
+            <div class="section-header"><h2>Our Trusted Partners</h2><div class="divider"></div></div>
+            <div class="client-grid">
+                <img src="panasonic-logo.png" alt="Panasonic" class="client-logo">
+                <img src="intretech-logo.webp" alt="Intretech" class="client-logo">
+        	<img src="BMnagano-logo.png" alt="BM Nagano" class="client-logo">
+                <div class="more-clients">& Many More...</div>
+            </div>
+        </section>
+
+        <section id="expertise" style="background: var(--bg-light);">
             <div class="section-header"><h2>Core Expertise</h2><div class="divider"></div></div>
             <div class="expertise-container">
                 <div class="expertise-card">
@@ -148,14 +184,14 @@
             </div>
         </section>
 
-        <section id="csr" style="background: var(--bg-light);">
+        <section id="csr">
             <div class="section-header"><h2>CSR & Sustainability</h2><div class="divider"></div></div>
             <div style="max-width: 900px; margin: 0 auto; text-align: center; color: #475569;">
                 <p>We integrate energy-efficient molding and waste reduction to protect the environment and support the local Johor Bahru industrial community.</p>
             </div>
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" style="background: var(--bg-light);">
             <div class="section-header"><h2>Portfolio</h2><p>(Click images to enlarge)</p><div class="divider"></div></div>
             <div class="portfolio-grid">
                 <div class="portfolio-card" onclick="openLightbox(this)"><img src="mini-steamer-product-line.jpeg" alt="Consumer Electronics"><div style="padding:15px; text-align:center;"><h3>Consumer Electronics</h3></div></div>
@@ -165,7 +201,7 @@
             </div>
         </section>
 
-        <section id="machinery" style="background: var(--bg-light);">
+        <section id="machinery">
             <div class="section-header"><h2>Machinery Fleet</h2><div class="divider"></div></div>
             <div class="table-container">
                 <table>
@@ -179,18 +215,18 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" style="background: var(--bg-light);">
             <div class="section-header"><h2>Location & Contact</h2><div class="divider"></div></div>
             <div class="contact-grid">
                 <div>
-                    <div class="pic-box"><h4>Our Office </h4><a href="tel:07-2364026" style="color:var(--primary); font-weight:800; text-decoration:none;">07-2364026</a></div>
-                    <div class="pic-box"><h4>Ms. Tee(PIC)</h4><a href="tel:60127863813" style="color:var(--primary); font-weight:800; text-decoration:none;">012-786 3813</a></div>
+                    <div class="pic-box"><h4>PIC.</h4><a href="tel:0167602667" style="color:var(--primary); font-weight:800; text-decoration:none;">016-760 2667</a></div>
+                    <div class="pic-box"><h4>Office No.</h4><a href="tel:072370021" style="color:var(--primary); font-weight:800; text-decoration:none;">07-237 0021</a></div>
                     <address style="font-style: normal; margin-top:20px; color: #64748b;">
                         2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi,<br>
                         81200 Johor Bahru, Johor, Malaysia.
                     </address>
                     <div class="map-wrapper">
-                        <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.447052063179!2d103.7088168745002!3d1.5022240984836859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da72c0139d9ba9%3A0xa2c4d7b42e29b7d8!2sIndustri%20Nikkoplas%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1773282002412!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4465036115216!2d103.71161749999999!3d1.5025245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da72c0139d9ba9%3A0xa2c4d7b42e29b7d8!2sIndustri%20Nikkoplas%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1776051807596!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -234,7 +270,9 @@
         }
     </script>
 
-    <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank">WA</a>
+    <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank">
+        WhatsApp Us
+    </a>
 
 </body>
 </html>
