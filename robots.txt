@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 告诉搜索引擎你的站点地图在哪里（请替换为你自己的域名或 GitHub Pages 网址）
+Sitemap: https://github.com/Jeffwong02/nikkoplas.com
