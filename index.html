@@ -7,7 +7,7 @@
     <title>Industri Nikkoplas Sdn. Bhd. | Plastic Injection Molding </title>
     <meta name="description" content="Industri Nikkoplas Sdn. Bhd. provides ISO-certified precision plastic injection molding and value-added Secondary Process services in Johor Bahru, Malaysia. Specializing in PS, ABS, PC resin components and secondary processing.">
     <meta name="keywords" content="Plastic Injection Molding, Johor Bahru, Industri Nikkoplas, Manufacturing Malaysia, Precision Plastic, Secondary Processing, Sub-Assembly">
-    
+
     <style>
         :root {
             --primary: #005aab;
@@ -34,13 +34,17 @@
         .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
         .logo-img { height: 60px; width: auto; }
         .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--header-text); text-transform: uppercase; margin: 0; }
-        
+
         nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; align-items: center; }
         nav a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
-        
+
         .cta-btn { background: var(--primary); color: white !important; padding: 12px 24px; border-radius: 4px; border: none; font-weight: 700; cursor: pointer; text-decoration: none; transition: 0.3s; display: inline-block; text-align: center; }
         .cta-btn:hover { background: var(--secondary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+        /* LANGUAGE TOGGLE */
+        .lang-toggle { background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 6px 14px; border-radius: 4px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.3s; white-space: nowrap; }
+        .lang-toggle:hover { background: var(--primary); color: white; }
 
         /* HERO & MISSION */
         .hero {
@@ -76,7 +80,7 @@
         .expertise-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--primary); }
         .expertise-card h3 { color: var(--secondary); margin-top: 0; font-size: 1.3rem; }
 
-        /* PROCESS SECTION STYLING (新增补齐样式) */
+        /* PROCESS SECTION */
         .process-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
         .process-step { background: white; padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .process-step h3 { color: var(--secondary); margin-top: 0; font-size: 1.15rem; }
@@ -86,7 +90,7 @@
         .portfolio-card { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.06); background: #fff; cursor: pointer; transition: 0.3s; border: 1px solid #eee; }
         .portfolio-card:hover { transform: scale(1.02); }
         .portfolio-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
-        
+
         #lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; cursor: pointer; }
         #lightbox img { max-width: 90%; max-height: 85%; border: 4px solid white; border-radius: 4px; }
 
@@ -95,8 +99,8 @@
         table { width: 100%; border-collapse: collapse; text-align: center; min-width: 500px; }
         th { background: var(--secondary); color: white; padding: 20px; }
         td { padding: 18px; border-bottom: 1px solid #f1f5f9; font-weight: 600; }
-        
-        /* FAQ SECTION STYLING (新增补齐样式) */
+
+        /* FAQ */
         .faq-section { max-width: 900px; margin: 0 auto; }
         .faq-item { background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .faq-item h4 { color: var(--secondary); margin: 0 0 10px 0; font-size: 1.1rem; }
@@ -113,14 +117,14 @@
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); background: #128C7E; }
 
-        @media (max-width: 992px) { 
-            .contact-grid { grid-template-columns: 1fr; } 
+        @media (max-width: 992px) {
+            .contact-grid { grid-template-columns: 1fr; }
             nav ul { gap: 10px; }
             nav a { font-size: 0.75rem; }
             .logo-text { font-size: 1.1rem; }
             .logo-img { height: 45px; }
         }
-        
+
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; padding: 1rem; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
@@ -138,163 +142,228 @@
         </a>
         <nav>
             <ul>
-                <li><a href="#about">History</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#machinery">Machinery</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="cta-btn">Contact</a></li>
+                <li><a href="#about" data-en="History" data-zh="公司历史">History</a></li>
+                <li><a href="#expertise" data-en="Expertise" data-zh="专业能力">Expertise</a></li>
+                <li><a href="#process" data-en="Process" data-zh="生产流程">Process</a></li>
+                <li><a href="#machinery" data-en="Machinery" data-zh="设备">Machinery</a></li>
+                <li><a href="#portfolio" data-en="Portfolio" data-zh="作品集">Portfolio</a></li>
+                <li><a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a></li>
+                <li><a href="#contact" class="cta-btn" data-en="Contact" data-zh="联系我们">Contact</a></li>
+                <li><button class="lang-toggle" id="langToggle" onclick="toggleLang()">中文</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="about" class="hero">
-            <div class="iso-badge">ISO 9001:2015 & 14001:2015 CERTIFIED</div>
-            <h1>Precision Injection Molding Specialists</h1>
-            <span class="slogan">Reliable Quality • Timely Delivery • Competitive Cost</span>
+            <div class="iso-badge">ISO 9001:2015 &amp; 14001:2015 CERTIFIED</div>
+            <h1 data-en="Precision Injection Molding Specialists" data-zh="精密注塑成型专家">Precision Injection Molding Specialists</h1>
+            <span class="slogan" data-en="Reliable Quality • Timely Delivery • Competitive Cost" data-zh="品质可靠 • 准时交货 • 价格具竞争力">Reliable Quality • Timely Delivery • Competitive Cost</span>
             <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 12px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);">
-                <h2 style="color: var(--accent); margin-top:0;">OUR MISSION</h2>
-                <p style="font-size: 1.2rem; margin-bottom:0;">To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners.</p>
+                <h2 style="color: var(--accent); margin-top:0;" data-en="OUR MISSION" data-zh="我们的使命">OUR MISSION</h2>
+                <p style="font-size: 1.2rem; margin-bottom:0;" data-en="To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners." data-zh="通过技术创新与ISO认证的卓越品质管理，为全球工业合作伙伴提供高精度塑料零部件。">To provide superior precision plastic components through technical innovation and ISO-certified quality excellence for our global industrial partners.</p>
             </div>
         </section>
 
         <section style="background: var(--bg-light); padding: 50px 5%;">
-            <div class="section-header"><h2>Our History & Success</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Our History &amp; Success" data-zh="公司历史与成就">Our History &amp; Success</h2>
+                <div class="divider"></div>
+            </div>
             <div class="history-grid">
-                <div class="history-item"><h4>1988</h4><p>Established in Johor Bahru</p></div>
-                <div class="history-item"><h4>35+ Yrs</h4><p>Industry Leadership</p></div>
-                <div class="history-item"><h4>1,000+</h4><p>Successful Projects</p></div>
-                <div class="history-item"><h4>Global</h4><p>MNC Client Partnerships</p></div>
+                <div class="history-item"><h4>1988</h4><p data-en="Established in Johor Bahru" data-zh="创立于柔佛巴鲁">Established in Johor Bahru</p></div>
+                <div class="history-item"><h4 data-en="35+ Yrs" data-zh="35+ 年">35+ Yrs</h4><p data-en="Industry Leadership" data-zh="行业领导地位">Industry Leadership</p></div>
+                <div class="history-item"><h4>1,000+</h4><p data-en="Successful Projects" data-zh="成功项目">Successful Projects</p></div>
+                <div class="history-item"><h4 data-en="Global" data-zh="全球">Global</h4><p data-en="MNC Client Partnerships" data-zh="跨国客户合作伙伴">MNC Client Partnerships</p></div>
             </div>
         </section>
 
         <section id="clients">
-            <div class="section-header"><h2>Our Trusted Partners</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Our Trusted Partners" data-zh="我们的合作伙伴">Our Trusted Partners</h2>
+                <div class="divider"></div>
+            </div>
             <div class="client-grid">
                 <img src="panasonic-logo.png" alt="Panasonic" class="client-logo">
                 <img src="intretech-logo.webp" alt="Intretech" class="client-logo">
                 <img src="BMnagano-logo.png" alt="BM Nagano" class="client-logo">
-                <div class="more-clients">& Many More...</div>
+                <div class="more-clients" data-en="&amp; Many More..." data-zh="及更多...">&amp; Many More...</div>
             </div>
         </section>
 
         <section id="expertise" style="background: var(--bg-light);">
-            <div class="section-header"><h2>Core Expertise</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Core Expertise" data-zh="核心专业">Core Expertise</h2>
+                <div class="divider"></div>
+            </div>
             <div class="expertise-container">
                 <div class="expertise-card">
-                    <h3>Secondary Processes</h3>
-                    <p>Comprehensive post-molding finishing services including <b>Silk Screen Printing</b>, precision <b>Spray Painting</b>, <b>Hot Stamping</b>, and <b>Ultrasonic Welding</b> for flawless technical aesthetics.</p>
+                    <h3 data-en="Secondary Processes" data-zh="二次加工服务">Secondary Processes</h3>
+                    <p data-en="Comprehensive post-molding finishing services including <b>Silk Screen Printing</b>, precision <b>Spray Painting</b>, <b>Hot Stamping</b>, and <b>Ultrasonic Welding</b> for flawless technical aesthetics." data-zh="全面的后成型精加工服务，包括<b>丝网印刷</b>、精密<b>喷涂</b>、<b>烫印</b>及<b>超声波焊接</b>，打造完美的工艺外观。">Comprehensive post-molding finishing services including <b>Silk Screen Printing</b>, precision <b>Spray Painting</b>, <b>Hot Stamping</b>, and <b>Ultrasonic Welding</b> for flawless technical aesthetics.</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>Value-Added Sub-Assembly</h3>
-                    <p>Providing cost-effective <b>manual and semi-automated component assembly</b>. From hardware insertion (brass threaded inserts) to multi-part grouping, reducing your secondary logistics risks.</p>
+                    <h3 data-en="Value-Added Sub-Assembly" data-zh="增值组装服务">Value-Added Sub-Assembly</h3>
+                    <p data-en="Providing cost-effective <b>manual and semi-automated component assembly</b>. From hardware insertion (brass threaded inserts) to multi-part grouping, reducing your secondary logistics risks." data-zh="提供高性价比的<b>人工及半自动化零件组装</b>服务，涵盖五金件嵌入（铜螺纹嵌件）到多零件分组，有效降低您的二次物流风险。">Providing cost-effective <b>manual and semi-automated component assembly</b>. From hardware insertion (brass threaded inserts) to multi-part grouping, reducing your secondary logistics risks.</p>
                 </div>
                 <div class="expertise-card">
-                    <h3>Material & Quality Excellence</h3>
-                    <p>Specialized in processing high-performance resins (<b>PS, ABS, PC</b>) and engineering plastics, backed by strict ISO-certified protocols ensuring <b>high-precision consistency</b> and ultra-low defect rates.</p>
+                    <h3 data-en="Material &amp; Quality Excellence" data-zh="材料与品质卓越">Material &amp; Quality Excellence</h3>
+                    <p data-en="Specialized in processing high-performance resins (<b>PS, ABS, PC</b>) and engineering plastics, backed by strict ISO-certified protocols ensuring <b>high-precision consistency</b> and ultra-low defect rates." data-zh="专业加工高性能树脂（<b>PS、ABS、PC</b>）及工程塑料，严格遵循ISO认证流程，确保<b>高精度一致性</b>与超低不良率。">Specialized in processing high-performance resins (<b>PS, ABS, PC</b>) and engineering plastics, backed by strict ISO-certified protocols ensuring <b>high-precision consistency</b> and ultra-low defect rates.</p>
                 </div>
             </div>
         </section>
 
         <section id="process">
-            <div class="section-header"><h2>Our Streamlined Process & Lead Time</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Our Streamlined Process &amp; Lead Time" data-zh="我们的流程与交期">Our Streamlined Process &amp; Lead Time</h2>
+                <div class="divider"></div>
+            </div>
             <div class="process-container">
                 <div class="process-step">
-                    <h3>1. Inquiry & RFQ (Within 24 Hours)</h3>
-                    <p>Send us your 3D drawings (STEP/IGS). Our engineering team will provide a detailed commercial quote and preliminary DFM feedback swiftly.</p>
+                    <h3 data-en="1. Inquiry &amp; RFQ (Within 24 Hours)" data-zh="1. 询价与报价（24小时内）">1. Inquiry &amp; RFQ (Within 24 Hours)</h3>
+                    <p data-en="Send us your 3D drawings (STEP/IGS). Our engineering team will provide a detailed commercial quote and preliminary DFM feedback swiftly." data-zh="请将您的3D图纸（STEP/IGS格式）发送给我们，我们的工程团队将迅速提供详细的商业报价及初步的DFM反馈。">Send us your 3D drawings (STEP/IGS). Our engineering team will provide a detailed commercial quote and preliminary DFM feedback swiftly.</p>
                 </div>
                 <div class="process-step">
-                    <h3>2. Mold Design & DFM (3 - 5 Days)</h3>
-                    <p>Before steel cutting, we issue a comprehensive Design for Manufacturability (DFM) report, optimizing parting lines and wall thickness to eliminate potential molding defects.</p>
+                    <h3 data-en="2. Mold Design &amp; DFM (3 - 5 Days)" data-zh="2. 模具设计与DFM（3至5天）">2. Mold Design &amp; DFM (3 - 5 Days)</h3>
+                    <p data-en="Before steel cutting, we issue a comprehensive Design for Manufacturability (DFM) report, optimizing parting lines and wall thickness to eliminate potential molding defects." data-zh="在开模前，我们将出具全面的可制造性设计（DFM）报告，优化分型线及壁厚，消除潜在的成型缺陷。">Before steel cutting, we issue a comprehensive Design for Manufacturability (DFM) report, optimizing parting lines and wall thickness to eliminate potential molding defects.</p>
                 </div>
                 <div class="process-step">
-                    <h3>3. Mold Fabrication (15 - 25 Days)</h3>
-                    <p>Depending on complexity, high-precision tool steel cutting, CNC machining, and EDM take approximately 2-4 weeks to match rigorous tolerances.</p>
+                    <h3 data-en="3. Mold Fabrication (15 - 25 Days)" data-zh="3. 模具制造（15至25天）">3. Mold Fabrication (15 - 25 Days)</h3>
+                    <p data-en="Depending on complexity, high-precision tool steel cutting, CNC machining, and EDM take approximately 2-4 weeks to match rigorous tolerances." data-zh="根据复杂程度，高精度工具钢切割、CNC加工及放电加工（EDM）约需2至4周，以满足严格的公差要求。">Depending on complexity, high-precision tool steel cutting, CNC machining, and EDM take approximately 2-4 weeks to match rigorous tolerances.</p>
                 </div>
                 <div class="process-step">
-                    <h3>4. T1 Samples & Approval (3 - 5 Days)</h3>
-                    <p>We perform the first trial run (T1) and dispatch physical samples via DHL/FedEx to your team for dynamic dimensional layout inspection.</p>
+                    <h3 data-en="4. T1 Samples &amp; Approval (3 - 5 Days)" data-zh="4. T1样品与审核（3至5天）">4. T1 Samples &amp; Approval (3 - 5 Days)</h3>
+                    <p data-en="We perform the first trial run (T1) and dispatch physical samples via DHL/FedEx to your team for dynamic dimensional layout inspection." data-zh="我们完成首次试模（T1）后，将通过DHL/FedEx将实物样品寄送至您的团队进行尺寸检验。">We perform the first trial run (T1) and dispatch physical samples via DHL/FedEx to your team for dynamic dimensional layout inspection.</p>
                 </div>
                 <div class="process-step">
-                    <h3>5. Production & Secondary Processes (7 - 14 Days)</h3>
-                    <p>Upon sample approval, high-efficiency mass manufacturing starts. Secondary surface treatments like printing or painting are executed seamlessly in-house.</p>
+                    <h3 data-en="5. Production &amp; Secondary Processes (7 - 14 Days)" data-zh="5. 生产与二次加工（7至14天）">5. Production &amp; Secondary Processes (7 - 14 Days)</h3>
+                    <p data-en="Upon sample approval, high-efficiency mass manufacturing starts. Secondary surface treatments like printing or painting are executed seamlessly in-house." data-zh="样品确认后，高效批量生产随即启动，印刷或喷涂等二次表面处理在厂内无缝衔接执行。">Upon sample approval, high-efficiency mass manufacturing starts. Secondary surface treatments like printing or painting are executed seamlessly in-house.</p>
                 </div>
                 <div class="process-step">
-                    <h3>6. Sub-Assembly & Final OQC (1 - 3 Days)</h3>
-                    <p>Basic component sub-assembly is carried out followed by 100% cosmetic checks and functional verification before final seaworthy packaging.</p>
+                    <h3 data-en="6. Sub-Assembly &amp; Final OQC (1 - 3 Days)" data-zh="6. 组装与最终出货检验（1至3天）">6. Sub-Assembly &amp; Final OQC (1 - 3 Days)</h3>
+                    <p data-en="Basic component sub-assembly is carried out followed by 100% cosmetic checks and functional verification before final seaworthy packaging." data-zh="完成基础零件组装后，进行100%外观检查及功能验证，再进行防潮包装出货。">Basic component sub-assembly is carried out followed by 100% cosmetic checks and functional verification before final seaworthy packaging.</p>
                 </div>
             </div>
         </section>
 
         <section id="machinery" style="background: var(--bg-light);">
-            <div class="section-header"><h2>Machinery Fleet (Horizontal)</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Machinery Fleet (Horizontal)" data-zh="设备配置（卧式）">Machinery Fleet (Horizontal)</h2>
+                <div class="divider"></div>
+            </div>
             <div class="table-container">
                 <table>
-                    <thead><tr><th>Category</th><th>Tonnage</th><th>Units</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th data-en="Category" data-zh="类别">Category</th>
+                            <th data-en="Tonnage" data-zh="吨位">Tonnage</th>
+                            <th data-en="Units" data-zh="台数">Units</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>Precision Micro Molding</td><td>50T - 100T</td><td>5</td></tr>
-                        <tr><td>Mid-Range Industrial Components</td><td>120T - 250T</td><td>12</td></tr>
-                        <tr><td>Large Format Capacity</td><td>260T - 450T</td><td>11</td></tr>
+                        <tr>
+                            <td data-en="Precision Micro Molding" data-zh="精密微型成型">Precision Micro Molding</td>
+                            <td>50T - 100T</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Mid-Range Industrial Components" data-zh="中型工业零件">Mid-Range Industrial Components</td>
+                            <td>120T - 250T</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td data-en="Large Format Capacity" data-zh="大型产能">Large Format Capacity</td>
+                            <td>260T - 450T</td>
+                            <td>11</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
         <section id="portfolio">
-            <div class="section-header"><h2>Portfolio</h2><p>(Click images to enlarge)</p><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Portfolio" data-zh="案例展示">Portfolio</h2>
+                <p data-en="(Click images to enlarge)" data-zh="（点击图片放大）">(Click images to enlarge)</p>
+                <div class="divider"></div>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card" onclick="openLightbox(this)"><img src="mini-steamer-product-line.jpeg" alt="Consumer Electronics"><div style="padding:15px; text-align:center;"><h3>Consumer Electronics</h3></div></div>
-                <div class="portfolio-card" onclick="openLightbox(this)"><img src="precision-plastic-molded-parts2.png" alt="Engineering Components"><div style="padding:15px; text-align:center;"><h3>Engineering Parts</h3></div></div>
-                <div class="portfolio-card" onclick="openLightbox(this)"><img src="precision-plastic-molded-parts.jpeg" alt="Industrial Applications"><div style="padding:15px; text-align:center;"><h3>Industrial Applications</h3></div></div>
-                <div class="portfolio-card" onclick="openLightbox(this)"><img src="Injection-molding-factory-johor.png" alt="Production Site"><div style="padding:15px; text-align:center;"><h3>Our Production Site</h3></div></div>
+                <div class="portfolio-card" onclick="openLightbox(this)">
+                    <img src="mini-steamer-product-line.jpeg" alt="Consumer Electronics">
+                    <div style="padding:15px; text-align:center;"><h3 data-en="Consumer Electronics" data-zh="消费电子">Consumer Electronics</h3></div>
+                </div>
+                <div class="portfolio-card" onclick="openLightbox(this)">
+                    <img src="precision-plastic-molded-parts2.png" alt="Engineering Components">
+                    <div style="padding:15px; text-align:center;"><h3 data-en="Engineering Parts" data-zh="工程零件">Engineering Parts</h3></div>
+                </div>
+                <div class="portfolio-card" onclick="openLightbox(this)">
+                    <img src="precision-plastic-molded-parts.jpeg" alt="Industrial Applications">
+                    <div style="padding:15px; text-align:center;"><h3 data-en="Industrial Applications" data-zh="工业应用">Industrial Applications</h3></div>
+                </div>
+                <div class="portfolio-card" onclick="openLightbox(this)">
+                    <img src="Injection-molding-factory-johor.png" alt="Production Site">
+                    <div style="padding:15px; text-align:center;"><h3 data-en="Our Production Site" data-zh="我们的生产基地">Our Production Site</h3></div>
+                </div>
             </div>
         </section>
 
         <section id="faq" style="background: var(--bg-light);">
-            <div class="section-header"><h2>Frequently Asked Questions (FAQ)</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Frequently Asked Questions (FAQ)" data-zh="常见问题解答">Frequently Asked Questions (FAQ)</h2>
+                <div class="divider"></div>
+            </div>
             <div class="faq-section">
                 <div class="faq-item">
-                    <h4>Q1: What is your Minimum Order Quantity (MOQ)?</h4>
-                    <p><strong>A:</strong> For new engineering projects, we support low MOQ for dynamic trial runs (typically 500 - 1,000 pcs). For standardized mass production, MOQ depends on part geometry and resin type, typically ranging from 5,000 to 200,000 pcs.</p>
+                    <h4 data-en="Q1: What is your Minimum Order Quantity (MOQ)?" data-zh="问1：最小起订量（MOQ）是多少？">Q1: What is your Minimum Order Quantity (MOQ)?</h4>
+                    <p data-en="<strong>A:</strong> For new engineering projects, we support low MOQ for dynamic trial runs (typically 500 - 1,000 pcs). For standardized mass production, MOQ depends on part geometry and resin type, typically ranging from 5,000 to 200,000 pcs." data-zh="<strong>答：</strong>对于新工程项目，我们支持低起订量试产（通常为500至1,000件）。标准化批量生产的最小起订量取决于零件形状及树脂类型，通常在5,000至200,000件之间。"><strong>A:</strong> For new engineering projects, we support low MOQ for dynamic trial runs (typically 500 - 1,000 pcs). For standardized mass production, MOQ depends on part geometry and resin type, typically ranging from 5,000 to 200,000 pcs.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q2: What secondary processing capabilities do you offer in Johor Bahru?</h4>
-                    <p><strong>A:</strong> We provide full post-molding surface finishing solutions including: Silk Screen Printing, Pad Printing, Laser Engraving, Ultrasonic Welding, Spray Painting.</p>
+                    <h4 data-en="Q2: What secondary processing capabilities do you offer in Johor Bahru?" data-zh="问2：你们在柔佛巴鲁提供哪些二次加工能力？">Q2: What secondary processing capabilities do you offer in Johor Bahru?</h4>
+                    <p data-en="<strong>A:</strong> We provide full post-molding surface finishing solutions including: Silk Screen Printing, Pad Printing, Laser Engraving, Ultrasonic Welding, Spray Painting." data-zh="<strong>答：</strong>我们提供全套后成型表面精加工方案，包括：丝网印刷、移印、激光雕刻、超声波焊接、喷涂。"><strong>A:</strong> We provide full post-molding surface finishing solutions including: Silk Screen Printing, Pad Printing, Laser Engraving, Ultrasonic Welding, Spray Painting.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q3: Do you offer assembly services before shipping?</h4>
-                    <p><strong>A:</strong> Yes! While we don't engage in complex electronics full OEM integration, we provide comprehensive <b>Sub-Assembly services</b> such as manual grouping, gluing, O-ring installation, and threaded brass hardware insertion.</p>
+                    <h4 data-en="Q3: Do you offer assembly services before shipping?" data-zh="问3：出货前是否提供组装服务？">Q3: Do you offer assembly services before shipping?</h4>
+                    <p data-en="<strong>A:</strong> Yes! While we don't engage in complex electronics full OEM integration, we provide comprehensive <b>Sub-Assembly services</b> such as manual grouping, gluing, O-ring installation, and threaded brass hardware insertion." data-zh="<strong>答：</strong>是的！虽然我们不承接复杂电子产品的完整OEM整合，但我们提供全面的<b>组装服务</b>，如人工分组、粘合、O形圈安装及铜螺纹嵌件嵌入。"><strong>A:</strong> Yes! While we don't engage in complex electronics full OEM integration, we provide comprehensive <b>Sub-Assembly services</b> such as manual grouping, gluing, O-ring installation, and threaded brass hardware insertion.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q4: Who retains ownership of the injection mold after tooling payment?</h4>
-                    <p><strong>A:</strong> The client retains 100% legal ownership of the molds. We provide complementary routine maintenance and secure storage in our facility, and will never utilize your tooling for any third-party production.</p>
+                    <h4 data-en="Q4: Who retains ownership of the injection mold after tooling payment?" data-zh="问4：支付模具费用后，模具归谁所有？">Q4: Who retains ownership of the injection mold after tooling payment?</h4>
+                    <p data-en="<strong>A:</strong> The client retains 100% legal ownership of the molds. We provide complementary routine maintenance and secure storage in our facility, and will never utilize your tooling for any third-party production." data-zh="<strong>答：</strong>客户拥有模具100%的法律所有权。我们提供免费的日常维护及安全存储服务，绝不将您的模具用于任何第三方生产。"><strong>A:</strong> The client retains 100% legal ownership of the molds. We provide complementary routine maintenance and secure storage in our facility, and will never utilize your tooling for any third-party production.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q5: Can you execute a Non-Disclosure Agreement (NDA) to protect our drawings?</h4>
-                    <p><strong>A:</strong> Absolutely. We strictly protect customer IP. We are prepared to sign your standard proprietary NDA or provide our legal template before you submit any 3D drawings.</p>
+                    <h4 data-en="Q5: Can you execute a Non-Disclosure Agreement (NDA) to protect our drawings?" data-zh="问5：能否签署保密协议（NDA）保护我们的图纸？">Q5: Can you execute a Non-Disclosure Agreement (NDA) to protect our drawings?</h4>
+                    <p data-en="<strong>A:</strong> Absolutely. We strictly protect customer IP. We are prepared to sign your standard proprietary NDA or provide our legal template before you submit any 3D drawings." data-zh="<strong>答：</strong>完全可以。我们严格保护客户知识产权，可在您提交任何3D图纸前签署您的标准NDA，或提供我们的法律模板。"><strong>A:</strong> Absolutely. We strictly protect customer IP. We are prepared to sign your standard proprietary NDA or provide our legal template before you submit any 3D drawings.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q6: What global trade terms do you accommodate?</h4>
-                    <p><strong>A:</strong> We can also coordinate with your freight forwarder to support seamless DDP shipping directly to your warehouse.</p>
+                    <h4 data-en="Q6: What global trade terms do you accommodate?" data-zh="问6：你们支持哪些国际贸易条款？">Q6: What global trade terms do you accommodate?</h4>
+                    <p data-en="<strong>A:</strong> We can also coordinate with your freight forwarder to support seamless DDP shipping directly to your warehouse." data-zh="<strong>答：</strong>我们可与您的货运代理协调，支持DDP完税后交货方式直接送达您的仓库。"><strong>A:</strong> We can also coordinate with your freight forwarder to support seamless DDP shipping directly to your warehouse.</p>
                 </div>
             </div>
         </section>
 
         <section id="csr">
-            <div class="section-header"><h2>CSR & Sustainability</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="CSR &amp; Sustainability" data-zh="企业社会责任与可持续发展">CSR &amp; Sustainability</h2>
+                <div class="divider"></div>
+            </div>
             <div style="max-width: 900px; margin: 0 auto; text-align: center; color: #475569;">
-                <p>We integrate energy-efficient molding systems and dynamic material waste reduction to protect our environment while empowering the local Johor Bahru industrial community.</p>
+                <p data-en="We integrate energy-efficient molding systems and dynamic material waste reduction to protect our environment while empowering the local Johor Bahru industrial community." data-zh="我们采用节能成型系统并积极减少材料浪费，在保护环境的同时，助力柔佛巴鲁本地工业社区的发展。">We integrate energy-efficient molding systems and dynamic material waste reduction to protect our environment while empowering the local Johor Bahru industrial community.</p>
             </div>
         </section>
 
         <section id="contact">
-            <div class="section-header"><h2>Location & Contact</h2><div class="divider"></div></div>
+            <div class="section-header">
+                <h2 data-en="Location &amp; Contact" data-zh="地址与联系方式">Location &amp; Contact</h2>
+                <div class="divider"></div>
+            </div>
             <div class="contact-grid">
                 <div>
-                    <div class="pic-box"><h4>PIC.</h4><a href="tel:0167602667" style="color:var(--primary); font-weight:800; text-decoration:none;">016-760 2667</a></div>
-                    <div class="pic-box"><h4>Office No.</h4><a href="tel:072370021" style="color:var(--primary); font-weight:800; text-decoration:none;">07-237 0021</a></div>
+                    <div class="pic-box">
+                        <h4 data-en="PIC." data-zh="联系人">PIC.</h4>
+                        <a href="tel:0167602667" style="color:var(--primary); font-weight:800; text-decoration:none;">016-760 2667</a>
+                    </div>
+                    <div class="pic-box">
+                        <h4 data-en="Office No." data-zh="办公室电话">Office No.</h4>
+                        <a href="tel:072370021" style="color:var(--primary); font-weight:800; text-decoration:none;">07-237 0021</a>
+                    </div>
                     <address style="font-style: normal; margin-top:20px; color: #64748b;">
                         2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi,<br>
                         81200 Johor Bahru, Johor, Malaysia.
@@ -305,21 +374,25 @@
                 </div>
 
                 <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-                    <h3>Send an Inquiry</h3>
+                    <h3 data-en="Send an Inquiry" data-zh="发送询价">Send an Inquiry</h3>
                     <form action="https://formspree.io/f/xvzbeqvd" method="POST">
-                        <input type="text" name="name" placeholder="Full Name" class="form-input" required>
-                        <input type="email" name="email" placeholder="Business Email" class="form-input" required>
-                        
+                        <input type="text" name="name" class="form-input" required
+                            data-placeholder-en="Full Name" data-placeholder-zh="姓名" placeholder="Full Name">
+                        <input type="email" name="email" class="form-input" required
+                            data-placeholder-en="Business Email" data-placeholder-zh="公司邮箱" placeholder="Business Email">
+
                         <select name="reason" class="form-select" required>
-                            <option value="" disabled selected>Select Inquiry Reason</option>
-                            <option value="RFQ / New Project">Request for Quotation (RFQ)</option>
-                            <option value="Production Support">Production Support</option>
-                            <option value="Career Application">Career / Job Application</option>
-                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="" disabled selected data-en="Select Inquiry Reason" data-zh="选择询价原因">Select Inquiry Reason</option>
+                            <option value="RFQ / New Project" data-en="Request for Quotation (RFQ)" data-zh="询价 / 新项目">Request for Quotation (RFQ)</option>
+                            <option value="Production Support" data-en="Production Support" data-zh="生产支持">Production Support</option>
+                            <option value="Career Application" data-en="Career / Job Application" data-zh="职位申请">Career / Job Application</option>
+                            <option value="General Inquiry" data-en="General Inquiry" data-zh="一般咨询">General Inquiry</option>
                         </select>
 
-                        <textarea name="message" rows="5" placeholder="Tell us about your requirements..." class="form-input" required></textarea>
-                        <button type="submit" class="cta-btn" style="width:100%;">SUBMIT MESSAGE</button>
+                        <textarea name="message" rows="5" class="form-input" required
+                            data-placeholder-en="Tell us about your requirements..." data-placeholder-zh="请描述您的需求..." placeholder="Tell us about your requirements..."></textarea>
+                        <button type="submit" class="cta-btn" style="width:100%;"
+                            data-en="SUBMIT MESSAGE" data-zh="提交信息">SUBMIT MESSAGE</button>
                     </form>
                 </div>
             </div>
@@ -328,8 +401,8 @@
 
     <footer>
         <p><strong>Industri Nikkoplas Sdn. Bhd.</strong> (169818-D)</p>
-        <p style="font-size:0.85rem; opacity:0.7;">ISO 9001:2015 & ISO 14001:2015 Certified Manufacturing Facility</p>
-        <p style="margin-top:25px; font-size:0.75rem; opacity:0.5;">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
+        <p style="font-size:0.85rem; opacity:0.7;" data-en="ISO 9001:2015 &amp; ISO 14001:2015 Certified Manufacturing Facility" data-zh="ISO 9001:2015 &amp; ISO 14001:2015 认证制造工厂">ISO 9001:2015 &amp; ISO 14001:2015 Certified Manufacturing Facility</p>
+        <p style="margin-top:25px; font-size:0.75rem; opacity:0.5;" data-en="© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved." data-zh="© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. 版权所有。">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
     </footer>
 
     <div id="lightbox" onclick="this.style.display='none'">
@@ -337,16 +410,43 @@
         <img id="lightbox-img" src="">
     </div>
 
+    <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank"
+        data-en="WhatsApp Us" data-zh="WhatsApp 联系">WhatsApp Us</a>
+
     <script>
         function openLightbox(card) {
             document.getElementById('lightbox-img').src = card.querySelector('img').src;
             document.getElementById('lightbox').style.display = 'flex';
         }
-    </script>
 
-    <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank">
-        WhatsApp Us
-    </a>
+        let currentLang = 'en';
+
+        function toggleLang() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            applyLang(currentLang);
+            document.getElementById('langToggle').textContent = currentLang === 'en' ? '中文' : 'EN';
+            document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        function applyLang(lang) {
+            // Text content elements
+            document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+                const val = el.getAttribute('data-' + lang);
+                if (val !== null) el.innerHTML = val;
+            });
+
+            // Placeholder attributes
+            document.querySelectorAll('[data-placeholder-en][data-placeholder-zh]').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+
+            // Select options
+            document.querySelectorAll('select option[data-en][data-zh]').forEach(opt => {
+                opt.textContent = opt.getAttribute('data-' + lang);
+            });
+        }
+    </script>
 
 </body>
 </html>
