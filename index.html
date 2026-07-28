@@ -410,6 +410,7 @@
         }
         .chat-header-info { flex: 1; min-width: 0; }
         .chat-header-name { font-weight: 700; font-size: 0.9rem; }
+        .chat-suggestions { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 14px 8px; }
         .chat-header-status { font-size: 0.7rem; opacity: 0.8; display: flex; align-items: center; gap: 5px; margin-top: 2px; }
         .chat-header-status::before { content: ''; width: 7px; height: 7px; background: var(--accent2); border-radius: 50%; flex-shrink: 0; }
         .chat-close { background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; opacity: 0.7; padding: 4px 6px; transition: opacity 0.2s; line-height: 1; border-radius: 50%; }
@@ -812,7 +813,7 @@
         <div class="chat-header">
             <div class="chat-avatar">🤖</div>
             <div class="chat-header-info">
-                <div class="chat-header-name">Nikkoplas Assistant</div>
+                <div class="chat-header-name">Nikkobot</div>
                 <div class="chat-header-status">Online · Replies instantly</div>
             </div>
             <button class="chat-close" onclick="toggleChat()" aria-label="Close chat">✕</button>
@@ -897,7 +898,7 @@
         // ── CHATBOT ──
         const chatKB = [
             { keys:['hello','hi','hey','good morning','good afternoon','howdy'],
-              reply:"Hi there! 👋 I'm the Nikkoplas Assistant. I can help with questions about our plastic injection molding services, MOQ, lead times, materials, and more.\n\nWhat would you like to know?" },
+              reply:"Hi there! 👋 I'm **Nikkobot**, your Nikkoplas assistant. I can help with questions about our plastic injection molding services, MOQ, lead times, materials, and more.\n\nWhat would you like to know?" },
             { keys:['material','resin','ps','abs','pc','plastic','polymer','nylon','pp','pe'],
               reply:"We specialize in high-performance engineering resins:\n\n• **PS** — Polystyrene\n• **ABS** — Acrylonitrile Butadiene Styrene\n• **PC** — Polycarbonate\n• **PP, PE** and other engineering plastics\n\nAll processed under ISO 9001:2015 quality protocols." },
             { keys:['moq','minimum order','minimum quantity','order quantity'],
@@ -937,7 +938,7 @@
             document.getElementById('chatbotWindow').classList.toggle('open', chatOpen);
             if (chatOpen && !chatInited) {
                 chatInited = true;
-                setTimeout(() => botMsg("Hi! 👋 I'm the **Nikkoplas AI Assistant**.\n\nI can answer questions about our plastic injection molding services, MOQ, lead times, materials, and more.\n\nWhat can I help you with today?"), 350);
+                setTimeout(() => botMsg("Hi! 👋 I'm **Nikkobot**, your Nikkoplas assistant.\n\nI can answer questions about our plastic injection molding services, MOQ, lead times, materials, and more.\n\nWhat can I help you with today?"), 350);
             }
             if (chatOpen) setTimeout(() => document.getElementById('chatInput').focus(), 400);
         }
@@ -981,6 +982,38 @@
             return fallbackMsg;
         }
 
+        const suggestionTopics = [
+            { label: 'Materials', q: 'What materials do you work with?' },
+            { label: 'MOQ', q: 'What is your MOQ?' },
+            { label: 'Lead Time', q: 'What is your lead time?' },
+            { label: 'Get a Quote', q: 'How do I get a quote?' },
+            { label: 'Certifications', q: 'What ISO certifications do you have?' },
+            { label: 'Secondary Processing', q: 'What secondary processes do you offer?' },
+            { label: 'Sub-Assembly', q: 'Do you offer sub-assembly services?' },
+            { label: 'Location', q: 'Where are you located?' },
+            { label: 'Contact', q: 'How do I contact you?' },
+            { label: 'Machinery', q: 'What machines do you have?' },
+            { label: 'DFM Report', q: 'Do you provide DFM reports?' },
+            { label: 'Shipping', q: 'What are your shipping terms?' },
+            { label: 'History', q: 'When was Nikkoplas established?' },
+            { label: 'NDA', q: 'Do you sign NDAs?' },
+        ];
+
+        function showSuggestions(excludeLabel) {
+            const pool = suggestionTopics.filter(t => t.label !== excludeLabel);
+            const picks = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+            const wrap = document.createElement('div');
+            wrap.className = 'chat-suggestions';
+            picks.forEach(t => {
+                const btn = document.createElement('button');
+                btn.className = 'quick-btn';
+                btn.textContent = t.label;
+                btn.onclick = () => { wrap.remove(); askQuick(t.q); };
+                wrap.appendChild(btn);
+            });
+            appendMsg(wrap);
+        }
+
         function sendChat() {
             const inp = document.getElementById('chatInput');
             const text = inp.value.trim(); if (!text) return;
@@ -988,16 +1021,17 @@
             userMsg(text);
             document.getElementById('quickBtns').style.display = 'none';
             const ti = typingIndicator();
-            setTimeout(() => { ti.remove(); botMsg(getReply(text)); }, 700);
+            setTimeout(() => { ti.remove(); botMsg(getReply(text)); showSuggestions(); }, 700);
         }
 
         function askQuick(text) {
             if (!chatOpen) toggleChat();
             document.getElementById('quickBtns').style.display = 'none';
+            const matchLabel = (suggestionTopics.find(t => t.q === text) || {}).label;
             setTimeout(() => {
                 userMsg(text);
                 const ti = typingIndicator();
-                setTimeout(() => { ti.remove(); botMsg(getReply(text)); }, 700);
+                setTimeout(() => { ti.remove(); botMsg(getReply(text)); showSuggestions(matchLabel); }, 700);
             }, chatInited ? 0 : 500);
         }
     </script>
