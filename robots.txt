@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nikkoplas.com/sitemap.xml
+Sitemap: https://www.industrinikkoplas.com/sitemap.xml
