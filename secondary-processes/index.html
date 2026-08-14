@@ -21,24 +21,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #005aab; --primary-light: #1a7fd4; --secondary: #002b5c;
-            --accent: #4da3ff; --accent2: #00c4b4;
-            --text: #1e293b; --text-muted: #64748b;
-            --bg-light: #f0f5fb; --bg-lighter: #f8fafc;
-            --card-shadow: 0 4px 24px rgba(0,43,92,0.08);
-            --card-shadow-hover: 0 12px 40px rgba(0,43,92,0.15);
-            --radius: 16px; --radius-sm: 8px;
-        }
+        :root { --primary: #005aab; --primary-light: #1a7fd4; --secondary: #002b5c; --accent: #4da3ff; --accent2: #00c4b4; --text: #1e293b; --text-muted: #64748b; --bg-light: #f0f5fb; --bg-lighter: #f8fafc; --card-shadow: 0 4px 24px rgba(0,43,92,0.08); --card-shadow-hover: 0 12px 40px rgba(0,43,92,0.15); --radius: 16px; --radius-sm: 8px; }
         *, *::before, *::after { box-sizing: border-box; }
         body { font-family: 'Inter', system-ui, sans-serif; margin: 0; color: var(--text); background: #fff; line-height: 1.7; }
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
         .reveal.visible { opacity: 1; transform: none; }
         @keyframes reveal-fallback { to { opacity: 1; transform: none; } }
         .reveal { animation: reveal-fallback 0s 3s forwards; }
-        .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
-        .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
+        .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; } .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; } .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
         header { background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,43,92,0.08); }
         .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
         .logo-img { height: 56px; width: auto; }
@@ -81,7 +71,6 @@
     </style>
 </head>
 <body>
-
 <header>
     <a href="/" class="logo-container" aria-label="Industri Nikkoplas Sdn. Bhd. — Home">
         <img src="/factory-logo.png" alt="Industri Nikkoplas Logo" class="logo-img">
@@ -99,14 +88,12 @@
         </ul>
     </nav>
 </header>
-
 <main>
     <div class="page-hero">
         <p class="breadcrumb"><a href="/">Home</a> / Secondary Processes</p>
         <h1>Secondary Processing Services<br>in Johor Bahru</h1>
         <p>Full in-house surface finishing, decoration, and joining — no outsourcing, no delays.</p>
     </div>
-
     <section style="background: white;">
         <div class="section-header reveal">
             <span class="section-label">What We Offer</span>
@@ -119,26 +106,31 @@
                 <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v2"/><path d="M8 18H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2"/><rect x="8" y="14" width="8" height="6" rx="1"/></svg></div>
                 <h3>Silk Screen Printing</h3>
                 <p>Precision silk screen printing for logos, part numbers, warning labels, and decorative markings on plastic components. Suitable for single-color and multi-color print runs with tight registration tolerances.</p>
+                <a href="/services/silk-screen-printing/" style="display:inline-block;margin-top:16px;color:var(--primary);font-weight:700;font-size:0.85rem;text-decoration:none;">Learn more →</a>
             </div>
             <div class="service-card reveal reveal-delay-2">
                 <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
                 <h3>Pad Printing</h3>
                 <p>Pad printing for curved, textured, or irregular surfaces where silk screen isn't practical — commonly used for small electronic housings, buttons, and control panel components.</p>
+                <a href="/services/pad-printing/" style="display:inline-block;margin-top:16px;color:var(--primary);font-weight:700;font-size:0.85rem;text-decoration:none;">Learn more →</a>
             </div>
             <div class="service-card reveal reveal-delay-3">
                 <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg></div>
                 <h3>Spray Painting</h3>
                 <p>In-house spray painting lines for cosmetic finishing, including primer, base coat, and clear coat processes. Color matching available to customer specifications (Pantone / RAL references).</p>
+                <a href="/services/spray-painting/" style="display:inline-block;margin-top:16px;color:var(--primary);font-weight:700;font-size:0.85rem;text-decoration:none;">Learn more →</a>
             </div>
             <div class="service-card reveal reveal-delay-4">
                 <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
                 <h3>Hot Stamping</h3>
                 <p>Foil-based hot stamping for metallic finishes, branding, and high-contrast markings that need to withstand handling and wear.</p>
+                <a href="/services/hot-stamping/" style="display:inline-block;margin-top:16px;color:var(--primary);font-weight:700;font-size:0.85rem;text-decoration:none;">Learn more →</a>
             </div>
             <div class="service-card reveal reveal-delay-5">
                 <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v8"/><path d="M18 6v11"/><path d="M22 10v3"/></svg></div>
                 <h3>Ultrasonic Welding</h3>
                 <p>Ultrasonic welding for joining plastic components without adhesives or fasteners — used in sub-assembly work where a strong, clean bond is required.</p>
+                <a href="/services/ultrasonic-welding/" style="display:inline-block;margin-top:16px;color:var(--primary);font-weight:700;font-size:0.85rem;text-decoration:none;">Learn more →</a>
             </div>
             <div class="service-card reveal reveal-delay-6" style="opacity:0.7;position:relative;">
                 <div style="position:absolute;top:16px;right:16px;background:#e8f0fb;color:var(--primary);font-size:0.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:50px;border:1px solid rgba(0,90,171,0.2);">Coming Soon</div>
@@ -148,7 +140,6 @@
             </div>
         </div>
     </section>
-
     <div class="why-banner">
         <h2 class="reveal">Why In-House Matters</h2>
         <p class="reveal">Because all secondary processes run under one roof alongside our injection moulding lines, we eliminate vendor handoffs and quality gaps. Parts move directly from moulding into finishing — tighter control, faster throughput, lower risk for you.</p>
@@ -161,20 +152,16 @@
         </div>
         <a href="/#contact" class="cta-btn reveal" style="font-size:0.95rem;padding:15px 36px;">Get a Quote →</a>
     </div>
-
     <section style="background: var(--bg-lighter); text-align:center; padding: 60px 5%;">
         <p class="reveal" style="color:var(--text-muted);max-width:700px;margin:0 auto 24px;font-size:0.97rem;">Secondary processing is part of our broader <strong>sub-assembly capability</strong> — combining moulding, finishing, and multi-part grouping into one streamlined supply chain. See our <a href="/capabilities/" style="color:var(--primary);font-weight:700;">Capabilities page</a> for the full picture.</p>
     </section>
 </main>
-
 <footer>
     <strong>Industri Nikkoplas Sdn. Bhd.</strong> <span style="opacity:0.5;">(169818-D)</span>
     <p class="footer-iso">ISO 9001:2015 &amp; ISO 14001:2015 Certified Manufacturing Facility</p>
-    <p class="footer-meta">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
+    <p class="footer-meta">&copy; 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
 </footer>
-
 <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp Us</a>
-
 <script>
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
