@@ -21,14 +21,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #005aab; --primary-light: #1a7fd4; --secondary: #002b5c; --accent: #4da3ff; --accent2: #00c4b4; --text: #1e293b; --text-muted: #64748b; --bg-light: #f0f5fb; --bg-lighter: #f8fafc; --card-shadow: 0 4px 24px rgba(0,43,92,0.08); --card-shadow-hover: 0 12px 40px rgba(0,43,92,0.15); --radius: 16px; --radius-sm: 8px; }
+        :root {
+            --primary: #005aab; --primary-light: #1a7fd4; --secondary: #002b5c;
+            --accent: #4da3ff; --accent2: #00c4b4;
+            --text: #1e293b; --text-muted: #64748b;
+            --bg-light: #f0f5fb; --bg-lighter: #f8fafc;
+            --card-shadow: 0 4px 24px rgba(0,43,92,0.08);
+            --card-shadow-hover: 0 12px 40px rgba(0,43,92,0.15);
+            --radius: 16px; --radius-sm: 8px;
+        }
         *, *::before, *::after { box-sizing: border-box; }
         body { font-family: 'Inter', system-ui, sans-serif; margin: 0; color: var(--text); background: #fff; line-height: 1.7; }
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
         .reveal.visible { opacity: 1; transform: none; }
         @keyframes reveal-fallback { to { opacity: 1; transform: none; } }
         .reveal { animation: reveal-fallback 0s 3s forwards; }
-        .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; } .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; } .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
+        .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
         header { background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,43,92,0.08); }
         .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
         .logo-img { height: 56px; width: auto; }
@@ -71,6 +81,7 @@
     </style>
 </head>
 <body>
+
 <header>
     <a href="/" class="logo-container" aria-label="Industri Nikkoplas Sdn. Bhd. — Home">
         <img src="/factory-logo.png" alt="Industri Nikkoplas Logo" class="logo-img">
@@ -88,12 +99,14 @@
         </ul>
     </nav>
 </header>
+
 <main>
     <div class="page-hero">
         <p class="breadcrumb"><a href="/">Home</a> / Secondary Processes</p>
         <h1>Secondary Processing Services<br>in Johor Bahru</h1>
         <p>Full in-house surface finishing, decoration, and joining — no outsourcing, no delays.</p>
     </div>
+
     <section style="background: white;">
         <div class="section-header reveal">
             <span class="section-label">What We Offer</span>
@@ -140,6 +153,7 @@
             </div>
         </div>
     </section>
+
     <div class="why-banner">
         <h2 class="reveal">Why In-House Matters</h2>
         <p class="reveal">Because all secondary processes run under one roof alongside our injection moulding lines, we eliminate vendor handoffs and quality gaps. Parts move directly from moulding into finishing — tighter control, faster throughput, lower risk for you.</p>
@@ -152,16 +166,20 @@
         </div>
         <a href="/#contact" class="cta-btn reveal" style="font-size:0.95rem;padding:15px 36px;">Get a Quote →</a>
     </div>
+
     <section style="background: var(--bg-lighter); text-align:center; padding: 60px 5%;">
         <p class="reveal" style="color:var(--text-muted);max-width:700px;margin:0 auto 24px;font-size:0.97rem;">Secondary processing is part of our broader <strong>sub-assembly capability</strong> — combining moulding, finishing, and multi-part grouping into one streamlined supply chain. See our <a href="/capabilities/" style="color:var(--primary);font-weight:700;">Capabilities page</a> for the full picture.</p>
     </section>
 </main>
+
 <footer>
     <strong>Industri Nikkoplas Sdn. Bhd.</strong> <span style="opacity:0.5;">(169818-D)</span>
     <p class="footer-iso">ISO 9001:2015 &amp; ISO 14001:2015 Certified Manufacturing Facility</p>
-    <p class="footer-meta">&copy; 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
+    <p class="footer-meta">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
 </footer>
+
 <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp Us</a>
+
 <script>
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
