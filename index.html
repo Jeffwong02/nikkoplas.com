@@ -563,6 +563,14 @@
         transition: opacity 0.25s;
       }
       .client-name:hover { opacity: 0.85; }
+      .client-logo-img {
+        height: 34px;
+        width: auto;
+        opacity: 0.55;
+        filter: grayscale(1);
+        transition: opacity 0.25s, filter 0.25s;
+      }
+      .client-logo-img:hover { opacity: 1; filter: grayscale(0); }
 
       /* ========== FAQ ========== */
       .faq-wrap { max-width: 820px; margin: 0 auto; }
@@ -997,7 +1005,9 @@
   <div class="clients-strip">
     <span class="clients-label">Trusted by Leading Brands</span>
     <div class="clients-logos">
-      <span class="client-name">Panasonic</span>
+      <img src="/panasonic-logo.png" alt="Panasonic" class="client-logo-img" loading="lazy" width="120" height="34">
+      <img src="/intretech-logo.webp" alt="Intretech" class="client-logo-img" loading="lazy" width="120" height="34">
+      <img src="/BMnagano-logo.png" alt="BM Nagano" class="client-logo-img" loading="lazy" width="120" height="34">
       <span class="client-name">Aiphone</span>
       <span class="client-name">Tiger</span>
       <span class="client-name">Nihon Kohden</span>
