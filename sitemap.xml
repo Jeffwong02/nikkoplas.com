@@ -72,4 +72,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
