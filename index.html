@@ -534,9 +534,8 @@
       /* ========== CLIENTS ========== */
       .clients-strip {
         background: var(--bg-light);
-        padding: 60px 0;
+        padding: 60px 5%;
         text-align: center;
-        overflow: hidden;
       }
       .clients-label {
         font-size: 0.72rem;
@@ -546,24 +545,13 @@
         color: var(--text-muted);
         margin-bottom: 32px;
         display: block;
-        padding: 0 5%;
-      }
-      .clients-marquee {
-        overflow: hidden;
-        -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-        mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
       }
       .clients-logos {
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 80px;
-        width: max-content;
-        animation: clients-scroll 18s linear infinite;
-      }
-      .clients-marquee:hover .clients-logos { animation-play-state: paused; }
-      @keyframes clients-scroll {
-        from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
+        flex-wrap: wrap;
+        gap: 20px 56px;
       }
       .client-logo-img {
         height: 38px;
@@ -571,7 +559,6 @@
         opacity: 0.6;
         filter: grayscale(1);
         transition: opacity 0.25s, filter 0.25s;
-        flex-shrink: 0;
       }
       .client-logo-img:hover { opacity: 1; filter: grayscale(0); }
 
@@ -1012,11 +999,11 @@
   <!-- CLIENTS -->
   <div class="clients-strip">
     <span class="clients-label">Trusted by Leading Brands</span>
-    <div class="clients-marquee">
-      <div class="clients-logos">
-        <img src="/panasonic-logo.png" alt="Panasonic" class="client-logo-img" loading="lazy" width="200" height="38">
-        <img src="/intretech-logo.webp" alt="Intretech" class="client-logo-img" loading="lazy" width="200" height="38">
-        <img src="/BMnagano-logo.png" alt="BM Nagano" class="client-logo-img" loading="lazy" width="200" height="38">
+    <div class="clients-logos">
+      <img src="/panasonic-logo.png" alt="Panasonic" class="client-logo-img" loading="lazy" width="200" height="38">
+      <img src="/intretech-logo.webp" alt="Intretech" class="client-logo-img" loading="lazy" width="200" height="38">
+      <img src="/BMnagano-logo.png" alt="BM Nagano" class="client-logo-img" loading="lazy" width="200" height="38">
+    </div>
   </div>
 
   <!-- FAQ -->
