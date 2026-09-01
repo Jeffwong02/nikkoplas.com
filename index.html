@@ -1213,20 +1213,20 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
     try {
-      const res = await fetch('https://formspree.io/f/xpwzjpkq', {
+      const res = await fetch('https://formspree.io/f/xvzbeqvd', {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, company: this.company.value, service: this.service.value, message })
       });
       if (res.ok) {
-        status.textContent = '✔ Message sent! We’ll be in touch within one business day.';
+        status.textContent = '✔ Message sent! We’ll be in touch soon.';
         status.style.color = '#4da3ff';
         this.reset();
       } else {
         throw new Error('Server error');
       }
     } catch {
-      status.textContent = 'Something went wrong. Please email us directly at bntee@nikkoplas.com';
+      status.textContent = 'Something went wrong. Please email us directly at bntee@nikkoplas.com or jeffwong@nikkoplas.com';
       status.style.color = '#ff6b6b';
     }
     btn.textContent = 'Send Enquiry →';
