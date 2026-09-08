@@ -31,10 +31,16 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.industrinikkoplas.com/services/pad-printing/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://www.industrinikkoplas.com/services/tempo-printing/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/services/2-colour-tempo-printing/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.industrinikkoplas.com/services/hot-stamping/</loc>
@@ -44,7 +50,19 @@
   </url>
   <url>
     <loc>https://www.industrinikkoplas.com/services/spray-painting/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/services/auto-spray-rotary/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
