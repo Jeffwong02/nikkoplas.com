@@ -14,7 +14,9 @@
   // Leave empty to run in FAQ-only mode (no AI backend required).
   var CHAT_ENDPOINT = 'https://nikkoplas-chatbot.wkwong04.workers.dev/';
 
-  var KB = [
+  var IS_ZH = (document.documentElement.lang || '').toLowerCase().indexOf('zh') === 0;
+
+  var KB_EN = [
     {
       id: 'materials',
       q: 'What materials do you mould?',
@@ -105,12 +107,110 @@
     }
   ];
 
-  var GREETING = "Hi! 👋 I'm the Nikkoplas assistant. Ask me about our materials, MOQ, services, certifications, or how to reach us.";
-  var FALLBACK = "I don't have a specific answer for that yet. For a detailed reply, please contact us at +607-237 0021, WhatsApp 016-760 2667, or bntee@nikkoplas.com.";
+  var KB_ZH = [
+    {
+      id: 'materials',
+      q: '你們可以射出成型哪些材料?',
+      label: '材料',
+      keywords: ['材料', '樹脂', '塑膠', 'ps', 'abs', '聚碳酸酯', 'pc', 'pp', '聚丙烯', '尼龍', 'pa6', 'pa66', '工程塑膠', '聚苯乙烯'],
+      a: '我們可加工多種熱塑性材料,包括 PS(聚苯乙烯)、ABS、PC(聚碳酸酯)、PC/ABS 合金、PP(聚丙烯)、PE、尼龍(PA6、PA66)及其他工程級材料。我們的射出成型機鎖模力範圍為 50 噸至 450 噸。',
+      link: { href: '/zh/capabilities/', text: '查看我們的生產能力' }
+    },
+    {
+      id: 'moq',
+      q: '最低訂購量(MOQ)是多少?',
+      label: 'MOQ',
+      keywords: ['moq', '最低訂購', '最低數量', '小量訂購', '數量'],
+      a: '最低訂購量取決於零件複雜度與模具投資。新開模具通常每批需 1,000 至 5,000 件以攤銷開模成本;若您已有現成模具,則可接受較小批量。請提供零件圖面與年用量預估,我們將提供具體報價。',
+      link: { href: '/zh/#contact', text: '索取報價' }
+    },
+    {
+      id: 'dfm',
+      q: '是否提供 DFM(可製造性設計)審查?',
+      keywords: ['dfm', '可製造性設計', '設計審查', '模具設計', '工模設計'],
+      a: '我們的外部合作夥伴會針對您的零件設計進行 DFM 分析 ── 檢查壁厚、脫模角度、澆口位置與熔接線 ── 並隨報價提供書面意見,避免日後高成本的模具修改。'
+    },
+    {
+      id: 'location',
+      q: '你們的廠址在哪裡?',
+      label: '廠址',
+      keywords: ['廠址', '地址', '位置', '柔佛', '新山', '工廠', '路線', '地圖'],
+      a: '我們的廠房位於 2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor, Malaysia ── 距新山市中心約 8 公里,並可透過新柔長堤輕鬆前往新加坡。'
+    },
+    {
+      id: 'iso',
+      q: '你們是否通過 ISO 認證?',
+      label: 'ISO 認證?',
+      keywords: ['iso', '認證', '品質管理', '環境管理', '9001', '14001'],
+      a: '是的 ── 我們持有 ISO 9001:2015(品質管理)與 ISO 14001:2015(環境管理)認證,並定期接受第三方稽核。',
+      link: { href: '/zh/certifications/', text: '查看我們的認證' }
+    },
+    {
+      id: 'contact',
+      q: '如何聯絡你們?',
+      label: '聯絡我們',
+      keywords: ['聯絡', '電話', '致電', 'whatsapp', '電郵', 'email', '找人', '業務'],
+      a: '您可以透過電話 +607-237 0021、WhatsApp 016-760 2667,或電郵 bntee@nikkoplas.com 與我們聯繫。辦公時間為週一至週五 8:00am–5:30pm。',
+      link: { href: '/zh/#contact', text: '前往聯絡我們頁面' }
+    },
+    {
+      id: 'about',
+      q: '請介紹一下 Industri Nikkoplas。',
+      keywords: ['關於', '公司', '歷史', '成立', '經驗', '你們是誰', 'nikkoplas'],
+      a: 'Industri Nikkoplas Sdn. Bhd. 是一家 ISO 9001:2015 與 14001:2015 認證的精密塑膠射出成型製造商,位於馬來西亞新山,自 1988 年起服務電子、電信及工程 OEM 客戶 ── 擁有 35 年以上經驗。',
+      link: { href: '/zh/about/', text: '深入了解我們' }
+    },
+    {
+      id: 'services',
+      q: '你們提供哪些二次加工/表面處理服務?',
+      label: '服務項目',
+      keywords: ['服務', '二次加工', '表面處理', '噴漆', '印刷', '熱燙印', '超音波熔接', '網版印刷', '移印', '組裝', '次組裝'],
+      a: '除了射出成型,我們也提供廠內二次加工:噴漆(自動與半自動迴轉式)、移印(含雙色移印)、網版印刷、熱燙印與超音波熔接 ── 提供您一站式從成型到表面處理的完整解決方案。',
+      link: { href: '/zh/secondary-processes/', text: '查看所有二次加工服務' }
+    },
+    {
+      id: 'industries',
+      q: '你們服務哪些產業?',
+      keywords: ['產業', '電子', '電信', '連接器外殼', '外殼', '領域', 'oem'],
+      a: '我們專精於為電子、電信及工程類 OEM 客戶生產精密塑膠零件 ── 包括連接器外殼與電信設備外殼。',
+      link: { href: '/zh/industries/electronics-telecom-engineering/', text: '查看我們服務的產業' }
+    },
+    {
+      id: 'machinery',
+      q: '你們有哪些機械設備?',
+      keywords: ['機台', '機械', '設備', '鎖模力', '噸位', '機隊', '壓機'],
+      a: '我們的射出成型機隊鎖模力範圍為 50 噸至 450 噸,適合中小噸位的精密零件生產。',
+      link: { href: '/zh/machinery/', text: '查看我們的機械設備' }
+    },
+    {
+      id: 'portfolio',
+      q: '可以看看你們過去的作品嗎?',
+      keywords: ['作品', '實績', '案例', '專案', '產品實績'],
+      a: '您可以在我們的產品實績頁面瀏覽我們製造過的零件與專案範例。',
+      link: { href: '/zh/portfolio/', text: '查看我們的產品實績' }
+    },
+    {
+      id: 'capabilities',
+      q: '你們的核心生產能力是什麼?',
+      keywords: ['生產能力', '一站式', '廠內噴漆', '精密射出成型'],
+      a: '我們的核心生產能力是一站式射出成型與表面處理(含廠內噴漆),以及鎖模力 50 噸至 450 噸的中小噸位精密射出成型。',
+      link: { href: '/zh/capabilities/', text: '查看我們的生產能力' }
+    }
+  ];
+
+  var KB = IS_ZH ? KB_ZH : KB_EN;
+
+  var GREETING = IS_ZH
+    ? "您好!👋 我是 Nikkoplas 的網站助理。歡迎詢問我們的材料、最低訂購量(MOQ)、服務項目、認證,或聯絡方式。"
+    : "Hi! 👋 I'm the Nikkoplas assistant. Ask me about our materials, MOQ, services, certifications, or how to reach us.";
+  var FALLBACK = IS_ZH
+    ? "這個問題我暫時沒有明確的答案。如需詳細回覆,請透過電話 +607-237 0021、WhatsApp 016-760 2667,或電郵 bntee@nikkoplas.com 與我們聯繫。"
+    : "I don't have a specific answer for that yet. For a detailed reply, please contact us at +607-237 0021, WhatsApp 016-760 2667, or bntee@nikkoplas.com.";
+  var FALLBACK_LINK = IS_ZH ? { href: '/zh/#contact', text: '前往聯絡我們頁面' } : { href: '/#contact', text: 'Go to contact section' };
   var QUICK_REPLIES = ['materials', 'moq', 'services', 'iso', 'location', 'contact'];
 
   function normalize(str) {
-    return str.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+    return str.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
   }
 
   function findAnswer(text) {
@@ -140,7 +240,7 @@
     return fetch(CHAT_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: message, history: history })
+      body: JSON.stringify({ message: message, history: history, lang: IS_ZH ? 'zh-Hant' : 'en' })
     }).then(function (res) {
       if (!res.ok) throw new Error('Chat backend error ' + res.status);
       return res.json();
@@ -207,15 +307,17 @@
   function build() {
     injectStyles();
 
-    var launcher = el('button', { id: 'nk-chat-launcher', 'aria-label': 'Open chat with Nikkoplas assistant', 'aria-expanded': 'false' });
+    var launcher = el('button', { id: 'nk-chat-launcher', 'aria-label': IS_ZH ? '開啟 Nikkoplas 助理對話視窗' : 'Open chat with Nikkoplas assistant', 'aria-expanded': 'false' });
     launcher.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.42 1.09 4.62 2.86 6.24-.14 1.34-.6 2.55-1.4 3.6a.5.5 0 0 0 .49.8c1.98-.36 3.63-1.1 4.9-2.02.99.24 2.04.38 3.15.38 5.52 0 10-4.03 10-9S17.52 2 12 2z"/></svg><span id="nk-chat-badge"></span>';
     document.body.appendChild(launcher);
 
-    var panel = el('div', { id: 'nk-chat-panel', role: 'dialog', 'aria-label': 'Nikkoplas chat assistant', 'aria-hidden': 'true' });
+    var panel = el('div', { id: 'nk-chat-panel', role: 'dialog', 'aria-label': IS_ZH ? 'Nikkoplas 聊天助理' : 'Nikkoplas chat assistant', 'aria-hidden': 'true' });
 
     var header = el('div', { id: 'nk-chat-header' },
-      '<div><strong>Nikkoplas Assistant</strong><span>Ask about moulding &amp; services</span></div>');
-    var closeBtn = el('button', { id: 'nk-chat-close', 'aria-label': 'Close chat', type: 'button' }, '&times;');
+      IS_ZH
+        ? '<div><strong>Nikkoplas 助理</strong><span>詢問射出成型與服務項目</span></div>'
+        : '<div><strong>Nikkoplas Assistant</strong><span>Ask about moulding &amp; services</span></div>');
+    var closeBtn = el('button', { id: 'nk-chat-close', 'aria-label': IS_ZH ? '關閉對話視窗' : 'Close chat', type: 'button' }, '&times;');
     header.appendChild(closeBtn);
 
     var messages = el('div', { id: 'nk-chat-messages', role: 'log', 'aria-live': 'polite' });
@@ -232,8 +334,8 @@
     });
 
     var form = el('form', { id: 'nk-chat-form' });
-    var input = el('input', { id: 'nk-chat-input', type: 'text', placeholder: 'Type your question…', autocomplete: 'off', maxlength: '300' });
-    var sendBtn = el('button', { id: 'nk-chat-send', type: 'submit' }, 'Send');
+    var input = el('input', { id: 'nk-chat-input', type: 'text', placeholder: IS_ZH ? '請輸入您的問題…' : 'Type your question…', autocomplete: 'off', maxlength: '300' });
+    var sendBtn = el('button', { id: 'nk-chat-send', type: 'submit' }, IS_ZH ? '送出' : 'Send');
     form.appendChild(input);
     form.appendChild(sendBtn);
 
@@ -299,7 +401,7 @@
       if (match) {
         addMessage(match.a, 'bot', match.link);
       } else {
-        addMessage(FALLBACK, 'bot', { href: '/#contact', text: 'Go to contact section' });
+        addMessage(FALLBACK, 'bot', FALLBACK_LINK);
       }
     }
 

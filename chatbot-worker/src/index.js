@@ -28,6 +28,10 @@ Guidelines:
 - Stay strictly on topic: Nikkoplas, its products, services, and how to get in touch. Politely decline unrelated requests (general knowledge, coding help, etc.) and steer back to how you can help with Nikkoplas.
 - Never invent certifications, prices, capacities, or capabilities not listed above.`;
 
+const LANG_INSTRUCTIONS = {
+  'zh-Hant': '\n\nRespond in Traditional Chinese (繁體中文), using natural, professional business Chinese as used in Malaysia. Keep the same factual content and page-path suggestions as the guidelines above; do not switch to Simplified Chinese, and do not switch to English unless the user writes to you in English.',
+};
+
 const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 
 const MAX_MESSAGE_LEN = 800;
@@ -83,6 +87,7 @@ export default {
 
     const message = typeof body.message === 'string' ? body.message.trim() : '';
     const history = Array.isArray(body.history) ? body.history : [];
+    const lang = body.lang === 'zh-Hant' ? 'zh-Hant' : 'en';
 
     if (!message) {
       return json({ error: 'Missing "message"' }, 400, cors);
@@ -100,7 +105,7 @@ export default {
       }));
 
     const messages = [
-      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'system', content: SYSTEM_PROMPT + (LANG_INSTRUCTIONS[lang] || '') },
       ...trimmedHistory,
       { role: 'user', content: message },
     ];
