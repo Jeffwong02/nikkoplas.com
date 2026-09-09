@@ -28,7 +28,7 @@ Guidelines:
 - Stay strictly on topic: Nikkoplas, its products, services, and how to get in touch. Politely decline unrelated requests (general knowledge, coding help, etc.) and steer back to how you can help with Nikkoplas.
 - Never invent certifications, prices, capacities, or capabilities not listed above.`;
 
-const GEMINI_MODEL = 'gemini-2.0-flash';
+const GEMINI_MODEL = 'gemini-3.6-flash';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 const MAX_MESSAGE_LEN = 800;
