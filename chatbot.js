@@ -18,6 +18,7 @@
     {
       id: 'materials',
       q: 'What materials do you mould?',
+      label: 'Materials',
       keywords: ['material', 'materials', 'resin', 'plastic', 'ps', 'abs', 'polycarbonate', 'pc', 'pp', 'polypropylene', 'nylon', 'pa6', 'pa66', 'engineering plastic', 'polystyrene'],
       a: 'We process a wide range of thermoplastics including PS (Polystyrene), ABS, PC (Polycarbonate), PC/ABS blends, PP (Polypropylene), PE, Nylon (PA6, PA66) and other engineering-grade materials. Our injection moulding machines range from 50T to 450T clamping force.',
       link: { href: '/capabilities/', text: 'See our moulding capabilities' }
@@ -25,6 +26,7 @@
     {
       id: 'moq',
       q: 'What is your minimum order quantity (MOQ)?',
+      label: 'MOQ',
       keywords: ['moq', 'minimum order', 'minimum quantity', 'small order', 'quantity'],
       a: 'MOQ depends on part complexity and tooling investment. For new tools we typically require 1,000–5,000 pieces per run to cover setup costs; smaller runs can be accommodated if you already have a tool with us. Send us your part drawing and annual volume estimate for a specific quotation.',
       link: { href: '/#contact', text: 'Request a quotation' }
@@ -38,12 +40,14 @@
     {
       id: 'location',
       q: 'Where are you located?',
+      label: 'Location',
       keywords: ['location', 'located', 'address', 'where', 'johor', 'factory', 'directions', 'map'],
       a: 'Our facility is at 2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor, Malaysia — about 8 km from Johor Bahru city centre and within easy reach of Singapore via the Causeway.'
     },
     {
       id: 'iso',
       q: 'Are you ISO certified?',
+      label: 'ISO Certified?',
       keywords: ['iso', 'certified', 'certification', 'certificate', 'quality management', 'environmental management', '9001', '14001'],
       a: 'Yes — we hold ISO 9001:2015 (Quality Management) and ISO 14001:2015 (Environmental Management) certifications, maintained through regular third-party audits.',
       link: { href: '/certifications/', text: 'View our certifications' }
@@ -51,6 +55,7 @@
     {
       id: 'contact',
       q: 'How can I contact you?',
+      label: 'Contact',
       keywords: ['contact', 'phone', 'call', 'whatsapp', 'email', 'reach', 'talk to someone', 'sales'],
       a: 'You can reach us at Tel: +607-237 0021, WhatsApp: 016-760 2667, or email bntee@nikkoplas.com. Office hours are Monday–Friday, 8:00am–5:30pm.',
       link: { href: '/#contact', text: 'Go to the contact section' }
@@ -65,6 +70,7 @@
     {
       id: 'services',
       q: 'What secondary processing / finishing services do you offer?',
+      label: 'Services',
       keywords: ['service', 'services', 'secondary process', 'finishing', 'spray painting', 'printing', 'hot stamping', 'ultrasonic welding', 'silk screen', 'pad printing', 'tempo printing', 'assembly', 'sub-assembly'],
       a: 'Beyond injection moulding, we offer in-house secondary processing: spray painting (auto & semi-auto rotary), tempo printing (incl. 2-colour), pad printing, silk screen printing, hot stamping and ultrasonic welding — giving you a one-stop moulding-to-finishing solution.',
       link: { href: '/secondary-processes/', text: 'See all secondary processes' }
@@ -168,15 +174,15 @@
       '.nk-typing span:nth-child(2){animation-delay:.15s;}',
       '.nk-typing span:nth-child(3){animation-delay:.3s;}',
       '@keyframes nk-bounce{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-4px);opacity:1;}}',
-      '#nk-chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;flex-shrink:0;}',
-      '.nk-chip{background:#eef4fb;color:#005aab;border:1px solid #d7e6f7;border-radius:999px;padding:6px 11px;font-size:.78rem;cursor:pointer;transition:background .15s;}',
+      '#nk-chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;flex-shrink:0;max-width:100%;box-sizing:border-box;}',
+      '.nk-chip{max-width:100%;background:#eef4fb;color:#005aab;border:1px solid #d7e6f7;border-radius:999px;padding:6px 11px;font-size:.78rem;line-height:1.3;cursor:pointer;transition:background .15s;white-space:normal;overflow-wrap:break-word;text-align:left;}',
       '.nk-chip:hover{background:#dcecfa;}',
-      '#nk-chat-form{display:flex;border-top:1px solid #e5edf5;padding:10px;gap:8px;flex-shrink:0;background:#fff;}',
-      '#nk-chat-input{flex:1;border:1px solid #dbe6f0;border-radius:10px;padding:9px 12px;font-size:.86rem;font-family:inherit;outline:none;}',
+      '#nk-chat-form{display:flex;border-top:1px solid #e5edf5;padding:10px;gap:8px;flex-shrink:0;background:#fff;box-sizing:border-box;}',
+      '#nk-chat-input{flex:1 1 auto;min-width:0;width:100%;border:1px solid #dbe6f0;border-radius:10px;padding:9px 12px;font-size:.86rem;font-family:inherit;outline:none;box-sizing:border-box;}',
       '#nk-chat-input:focus{border-color:#005aab;}',
-      '#nk-chat-send{background:#005aab;color:#fff;border:none;border-radius:10px;padding:0 14px;font-size:.86rem;font-weight:600;cursor:pointer;}',
+      '#nk-chat-send{flex:0 0 auto;background:#005aab;color:#fff;border:none;border-radius:10px;padding:0 14px;font-size:.86rem;font-weight:600;cursor:pointer;}',
       '#nk-chat-send:hover{background:#003d7a;}',
-      '@media (max-width:420px){#nk-chat-panel{right:16px;left:16px;width:auto;}}'
+      '@media (max-width:420px){#nk-chat-panel{right:16px;left:16px;width:auto;bottom:148px;height:min(460px,calc(100vh - 180px));}#nk-chat-quick{padding:0 10px 8px;}.nk-chip{font-size:.74rem;padding:5px 9px;}#nk-chat-form{padding:8px;gap:6px;}#nk-chat-send{padding:0 10px;font-size:.8rem;}}'
     ].join('');
     var style = document.createElement('style');
     style.textContent = css;
@@ -218,7 +224,7 @@
     QUICK_REPLIES.forEach(function (id) {
       var entry = KB.filter(function (e) { return e.id === id; })[0];
       if (!entry) return;
-      var chip = el('button', { type: 'button', class: 'nk-chip' }, escapeHtml(entry.q));
+      var chip = el('button', { type: 'button', class: 'nk-chip', title: entry.q }, escapeHtml(entry.label || entry.q));
       chip.addEventListener('click', function () {
         handleUserMessage(entry.q);
       });
