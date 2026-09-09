@@ -1,11 +1,18 @@
 /*
  * Nikkoplas website chatbot widget.
- * Self-contained: injects its own CSS + markup, answers common questions
- * about the company using a small keyword-matched knowledge base, and
- * falls back to contact details when it doesn't have a good answer.
+ * Self-contained: injects its own CSS + markup. Sends questions to a
+ * Cloudflare Worker backend (see /chatbot-worker) that calls the Google
+ * Gemini API, so answers come from a real AI model grounded in the
+ * company's facts. If CHAT_ENDPOINT isn't configured yet, or the request
+ * fails, it falls back to local keyword-matched FAQ answers so the widget
+ * never breaks.
  */
 (function () {
   'use strict';
+
+  // Set this to your deployed Cloudflare Worker URL (see chatbot-worker/README.md).
+  // Leave empty to run in FAQ-only mode (no AI backend required).
+  var CHAT_ENDPOINT = '';
 
   var KB = [
     {
@@ -123,6 +130,20 @@
     return bestScore > 0 ? best : null;
   }
 
+  function askAI(message, history) {
+    return fetch(CHAT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: message, history: history })
+    }).then(function (res) {
+      if (!res.ok) throw new Error('Chat backend error ' + res.status);
+      return res.json();
+    }).then(function (data) {
+      if (!data || !data.reply) throw new Error('Empty reply');
+      return data.reply;
+    });
+  }
+
   function injectStyles() {
     var css = [
       '#nk-chat-launcher{position:fixed;bottom:96px;right:28px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#005aab,#00c4b4);border:none;box-shadow:0 6px 24px rgba(0,43,92,0.35);cursor:pointer;z-index:1001;display:flex;align-items:center;justify-content:center;transition:transform .2s ease;padding:0;}',
@@ -142,6 +163,11 @@
       '.nk-msg-user{align-self:flex-end;background:#005aab;color:#fff;border-bottom-right-radius:4px;}',
       '.nk-msg a{color:#00c4b4;font-weight:600;text-decoration:underline;}',
       '.nk-msg-bot a{color:#005aab;}',
+      '.nk-typing{display:inline-flex;gap:3px;align-items:center;padding:2px 0;}',
+      '.nk-typing span{width:6px;height:6px;border-radius:50%;background:#94a3b8;animation:nk-bounce 1.2s infinite ease-in-out;}',
+      '.nk-typing span:nth-child(2){animation-delay:.15s;}',
+      '.nk-typing span:nth-child(3){animation-delay:.3s;}',
+      '@keyframes nk-bounce{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-4px);opacity:1;}}',
       '#nk-chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;flex-shrink:0;}',
       '.nk-chip{background:#eef4fb;color:#005aab;border:1px solid #d7e6f7;border-radius:999px;padding:6px 11px;font-size:.78rem;cursor:pointer;transition:background .15s;}',
       '.nk-chip:hover{background:#dcecfa;}',
@@ -211,6 +237,8 @@
     panel.appendChild(form);
     document.body.appendChild(panel);
 
+    var history = [];
+
     function addMessage(text, who, linkObj) {
       var msg = el('div', { class: 'nk-msg ' + (who === 'user' ? 'nk-msg-user' : 'nk-msg-bot') });
       msg.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
@@ -221,6 +249,23 @@
       }
       messages.appendChild(msg);
       messages.scrollTop = messages.scrollHeight;
+      return msg;
+    }
+
+    function addTyping() {
+      var msg = el('div', { class: 'nk-msg nk-msg-bot' }, '<span class="nk-typing"><span></span><span></span><span></span></span>');
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+      return msg;
+    }
+
+    function localFallback(text) {
+      var match = findAnswer(text);
+      if (match) {
+        addMessage(match.a, 'bot', match.link);
+      } else {
+        addMessage(FALLBACK, 'bot', { href: '/#contact', text: 'Go to contact section' });
+      }
     }
 
     function handleUserMessage(text) {
@@ -228,14 +273,22 @@
       if (!text) return;
       addMessage(text, 'user');
       input.value = '';
-      var match = findAnswer(text);
-      setTimeout(function () {
-        if (match) {
-          addMessage(match.a, 'bot', match.link);
-        } else {
-          addMessage(FALLBACK, 'bot', { href: '/#contact', text: 'Go to contact section' });
-        }
-      }, 250);
+
+      if (!CHAT_ENDPOINT) {
+        setTimeout(function () { localFallback(text); }, 250);
+        return;
+      }
+
+      var typingEl = addTyping();
+      askAI(text, history).then(function (reply) {
+        typingEl.remove();
+        addMessage(reply, 'bot');
+        history.push({ role: 'user', text: text });
+        history.push({ role: 'model', text: reply });
+      }).catch(function () {
+        typingEl.remove();
+        localFallback(text);
+      });
     }
 
     form.addEventListener('submit', function (e) {
