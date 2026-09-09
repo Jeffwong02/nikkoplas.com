@@ -12,7 +12,7 @@
 
   // Set this to your deployed Cloudflare Worker URL (see chatbot-worker/README.md).
   // Leave empty to run in FAQ-only mode (no AI backend required).
-  var CHAT_ENDPOINT = '';
+  var CHAT_ENDPOINT = 'https://nikkoplas-chatbot.wkwong04.workers.dev/';
 
   var KB = [
     {
