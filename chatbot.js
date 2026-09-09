@@ -243,6 +243,35 @@
     panel.appendChild(form);
     document.body.appendChild(panel);
 
+    // Centre the launcher above the WhatsApp float button (if present) so the
+    // two floating buttons read as one aligned stack instead of an
+    // off-centre circle-on-pill.
+    function positionFAB() {
+      var wa = document.querySelector('.whatsapp-float');
+      var launcherSize = 56;
+      var gapAboveWa = 16;
+      var launcherRight = 28;
+      var launcherBottom = 96;
+      if (wa) {
+        var r = wa.getBoundingClientRect();
+        if (r.width && r.height) {
+          var rightGap = window.innerWidth - r.right;
+          var bottomGap = window.innerHeight - r.bottom;
+          launcherRight = Math.max(16, Math.round(rightGap + (r.width - launcherSize) / 2));
+          launcherBottom = Math.round(bottomGap + r.height + gapAboveWa);
+        }
+      }
+      launcher.style.right = launcherRight + 'px';
+      launcher.style.bottom = launcherBottom + 'px';
+      panel.style.bottom = (launcherBottom + launcherSize + 12) + 'px';
+    }
+    positionFAB();
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(positionFAB, 150);
+    });
+
     var history = [];
 
     function addMessage(text, who, linkObj) {
