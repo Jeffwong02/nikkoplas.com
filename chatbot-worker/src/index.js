@@ -1,11 +1,11 @@
 /**
- * Cloudflare Worker: secure proxy between the Nikkoplas website chatbot and
- * the Google Gemini API. Keeps GEMINI_API_KEY server-side (as a Worker
- * secret) so it never reaches the browser, and only accepts requests from
- * the configured site origin.
+ * Cloudflare Worker: secure backend for the Nikkoplas website chatbot.
+ * Uses Cloudflare Workers AI (env.AI binding) directly - no external API
+ * key or third-party account needed, and it's free (10,000 neurons/day).
+ * Only accepts requests from the configured site origin.
  */
 
-const SYSTEM_INSTRUCTION = `You are the website assistant for Industri Nikkoplas Sdn. Bhd. (Nikkoplas), a precision plastic injection moulding manufacturer in Johor Bahru, Malaysia.
+const SYSTEM_PROMPT = `You are the website assistant for Industri Nikkoplas Sdn. Bhd. (Nikkoplas), a precision plastic injection moulding manufacturer in Johor Bahru, Malaysia.
 
 Company facts you can rely on:
 - Founded 1988, 35+ years of manufacturing experience. Legal name: Industri Nikkoplas Sdn. Bhd. (169818-D).
@@ -28,8 +28,7 @@ Guidelines:
 - Stay strictly on topic: Nikkoplas, its products, services, and how to get in touch. Politely decline unrelated requests (general knowledge, coding help, etc.) and steer back to how you can help with Nikkoplas.
 - Never invent certifications, prices, capacities, or capabilities not listed above.`;
 
-const GEMINI_MODEL = 'gemini-2.0-flash';
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 
 const MAX_MESSAGE_LEN = 800;
 const MAX_HISTORY_TURNS = 8;
@@ -71,8 +70,8 @@ export default {
       return json({ error: 'Origin not allowed' }, 403, cors);
     }
 
-    if (!env.GEMINI_API_KEY) {
-      return json({ error: 'Server is not configured (missing GEMINI_API_KEY).' }, 500, cors);
+    if (!env.AI) {
+      return json({ error: 'Server is not configured (missing AI binding).' }, 500, cors);
     }
 
     let body;
@@ -95,38 +94,29 @@ export default {
     const trimmedHistory = history
       .filter((h) => h && (h.role === 'user' || h.role === 'model') && typeof h.text === 'string')
       .slice(-MAX_HISTORY_TURNS)
-      .map((h) => ({ role: h.role, parts: [{ text: h.text.slice(0, MAX_MESSAGE_LEN) }] }));
+      .map((h) => ({
+        role: h.role === 'model' ? 'assistant' : 'user',
+        content: h.text.slice(0, MAX_MESSAGE_LEN),
+      }));
 
-    const contents = [...trimmedHistory, { role: 'user', parts: [{ text: message }] }];
+    const messages = [
+      { role: 'system', content: SYSTEM_PROMPT },
+      ...trimmedHistory,
+      { role: 'user', content: message },
+    ];
 
-    let geminiRes;
+    let aiResult;
     try {
-      geminiRes = await fetch(GEMINI_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': env.GEMINI_API_KEY,
-        },
-        body: JSON.stringify({
-          system_instruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
-          contents,
-          generationConfig: {
-            temperature: 0.4,
-            maxOutputTokens: 400,
-          },
-        }),
+      aiResult = await env.AI.run(AI_MODEL, {
+        messages,
+        max_tokens: 400,
+        temperature: 0.4,
       });
     } catch (e) {
-      return json({ error: 'Failed to reach the AI service' }, 502, cors);
+      return json({ error: 'AI service error', detail: String(e && e.message ? e.message : e).slice(0, 300) }, 502, cors);
     }
 
-    if (!geminiRes.ok) {
-      const errText = await geminiRes.text().catch(() => '');
-      return json({ error: 'AI service error', detail: errText.slice(0, 300) }, 502, cors);
-    }
-
-    const data = await geminiRes.json();
-    const reply = data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') || '';
+    const reply = (aiResult && aiResult.response ? aiResult.response : '').trim();
 
     if (!reply) {
       return json({ error: 'AI returned an empty response' }, 502, cors);
