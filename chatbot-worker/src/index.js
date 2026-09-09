@@ -28,7 +28,7 @@ Guidelines:
 - Stay strictly on topic: Nikkoplas, its products, services, and how to get in touch. Politely decline unrelated requests (general knowledge, coding help, etc.) and steer back to how you can help with Nikkoplas.
 - Never invent certifications, prices, capacities, or capabilities not listed above.`;
 
-const AI_MODEL = '@cf/meta/llama-3.1-8b-instruct';
+const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 
 const MAX_MESSAGE_LEN = 800;
 const MAX_HISTORY_TURNS = 8;
