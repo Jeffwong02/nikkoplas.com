@@ -82,6 +82,13 @@
         .why-banner p { max-width: 760px; margin: 0 auto 40px; opacity: 0.85; font-size: 1.05rem; line-height: 1.8; }
         .why-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto 40px; }
         .why-chip { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 10px 22px; border-radius: 50px; font-size: 0.88rem; font-weight: 600; }
+        .facility-photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); cursor: pointer; transition: box-shadow 0.35s; }
+        .facility-photo:hover { box-shadow: var(--card-shadow-hover); }
+        .facility-photo img { width: 100%; display: block; }
+        #lightbox { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; cursor: pointer; }
+        #lightbox img { max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        #lightbox-close { position: absolute; top: 20px; right: 32px; color: white; font-size: 44px; font-weight: 300; line-height: 1; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; }
+        #lightbox-close:hover { opacity: 1; }
         footer { background: var(--secondary); color: white; padding: 60px 5% 40px; text-align: center; border-top: 5px solid var(--primary); }
         footer strong { font-family: 'Poppins', sans-serif; font-size: 1.1rem; }
         .footer-meta { font-size: 0.8rem; opacity: 0.55; margin-top: 8px; }
@@ -182,6 +189,20 @@
         </div>
     </section>
 
+    <section style="background: var(--bg-lighter);">
+        <div class="section-header reveal">
+            <span class="section-label">Our Facility</span>
+            <h2>Our Production Site</h2>
+            <div class="divider"></div>
+        </div>
+        <div style="max-width:900px;margin:0 auto;" class="reveal">
+            <div class="facility-photo" onclick="openLightbox('/Injection-moulding-factory-johor.png')">
+                <img src="/Injection-moulding-factory-johor.png" alt="Injection moulding factory Johor Bahru Malaysia — Industri Nikkoplas production floor" loading="lazy" width="900" height="500">
+            </div>
+            <p style="text-align:center;color:var(--text-muted);margin-top:20px;font-size:0.97rem;">Our Tampoi, Johor Bahru facility — 28 horizontal injection machines running <a href="/capabilities/small-to-mid-tonnage-precision-molding/" style="color:var(--primary);font-weight:700;">50T to 450T</a> alongside the in-house secondary processing and sub-assembly lines above.</p>
+        </div>
+    </section>
+
     <div class="why-banner">
         <h2 class="reveal">Why In-House Matters</h2>
         <p class="reveal">Because all secondary processes run under one roof alongside our injection moulding lines, we eliminate vendor handoffs and quality gaps. Parts move directly from moulding into finishing — tighter control, faster throughput, lower risk for you.</p>
@@ -208,12 +229,18 @@
     <p class="footer-meta">© 2026 Industri Nikkoplas Sdn. Bhd. SSM 169818-D. All Rights Reserved.</p>
 </footer>
 
+<div id="lightbox" onclick="this.style.display='none'">
+    <span id="lightbox-close">×</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
 <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp Us</a>
 
 <script>
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
+    function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDDKHMQFDB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RDDKHMQFDB');</script>
