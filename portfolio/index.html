@@ -49,6 +49,7 @@
         .reveal { animation: reveal-fallback 0s 3s forwards; }
         .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
         header { background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,43,92,0.08); }
         .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
         .logo-img { height: 56px; width: auto; }
@@ -187,6 +188,26 @@
                 <div class="portfolio-label">
                     <h3>Our Production Site</h3>
                     <p>Our Tampoi, Johor Bahru facility — 28 horizontal injection machines running <a href="/capabilities/small-to-mid-tonnage-precision-molding/" style="color:var(--primary);font-weight:700;">50T to 450T</a> alongside <a href="/capabilities/one-stop-molding-finishing/" style="color:var(--primary);font-weight:700;">in-house secondary processing and sub-assembly lines</a>.</p>
+                </div>
+            </div>
+            <div class="portfolio-card reveal reveal-delay-5" onclick="openLightbox('/precision-base-housing-cover.jpg')">
+                <div class="portfolio-img-wrap">
+                    <img src="/precision-base-housing-cover.jpg" alt="Precision molded plastic base housing with integrated mounting features by Industri Nikkoplas" loading="lazy" width="600" height="260">
+                    <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
+                </div>
+                <div class="portfolio-label">
+                    <h3>Molded Base Housings</h3>
+                    <p>Structural base and cover components with integrated bosses, snap-fits, and mounting features — moulded to tight tolerance for clean sub-assembly fit.</p>
+                </div>
+            </div>
+            <div class="portfolio-card reveal reveal-delay-6" onclick="openLightbox('/air-filtration-cartridge-assembly.jpg')">
+                <div class="portfolio-img-wrap">
+                    <img src="/air-filtration-cartridge-assembly.jpg" alt="Air filtration cartridge assembly with molded plastic frame and honeycomb grille by Industri Nikkoplas" loading="lazy" width="600" height="260">
+                    <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
+                </div>
+                <div class="portfolio-label">
+                    <h3>Air Filtration Assemblies</h3>
+                    <p>Filter cartridge frames, honeycomb support grilles, and mounting brackets moulded and assembled for air purification and HVAC applications.</p>
                 </div>
             </div>
         </div>
