@@ -49,6 +49,7 @@
         .reveal { animation: reveal-fallback 0s 3s forwards; }
         .reveal-delay-1 { transition-delay: 0.1s; } .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; } .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; } .reveal-delay-6 { transition-delay: 0.6s; }
         header { background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,43,92,0.08); }
         .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
         .logo-img { height: 56px; width: auto; }
@@ -187,6 +188,26 @@
                 <div class="portfolio-label">
                     <h3>我們的生產基地</h3>
                     <p>我們位於 Tampoi、新山的廠區——28 台臥式射出成型機，運轉範圍<a href="/zh/capabilities/small-to-mid-tonnage-precision-molding/" style="color:var(--primary);font-weight:700;">50噸至450噸</a>，並配備<a href="/zh/capabilities/one-stop-molding-finishing/" style="color:var(--primary);font-weight:700;">內部二次加工與次組裝產線</a>。</p>
+                </div>
+            </div>
+            <div class="portfolio-card reveal reveal-delay-5" onclick="openLightbox('/precision-base-housing-cover.jpg')">
+                <div class="portfolio-img-wrap">
+                    <img src="/precision-base-housing-cover.jpg" alt="Industri Nikkoplas 精密射出成型底座外殼，含整合式安裝結構" loading="lazy" width="600" height="260">
+                    <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
+                </div>
+                <div class="portfolio-label">
+                    <h3>成型底座外殼</h3>
+                    <p>結構性底座與外殼零件，含整合式螺柱、卡扣與安裝結構——依嚴格公差成型，確保次組裝件貼合精準。</p>
+                </div>
+            </div>
+            <div class="portfolio-card reveal reveal-delay-6" onclick="openLightbox('/air-filtration-cartridge-assembly.jpg')">
+                <div class="portfolio-img-wrap">
+                    <img src="/air-filtration-cartridge-assembly.jpg" alt="Industri Nikkoplas 空氣濾網濾芯組件，含成型塑膠外框與蜂巢護網" loading="lazy" width="600" height="260">
+                    <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
+                </div>
+                <div class="portfolio-label">
+                    <h3>空氣過濾組件</h3>
+                    <p>濾芯外框、蜂巢支撐護網與安裝支架，經成型與組裝後應用於空氣清淨與空調系統。</p>
                 </div>
             </div>
         </div>
