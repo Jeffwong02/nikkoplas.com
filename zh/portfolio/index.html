@@ -96,6 +96,9 @@
         #lightbox img { max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
         #lightbox-close { position: absolute; top: 20px; right: 32px; color: white; font-size: 44px; font-weight: 300; line-height: 1; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; }
         #lightbox-close:hover { opacity: 1; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 40px; font-weight: 300; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; padding: 10px 16px; user-select: none; }
+        .lightbox-nav:hover { opacity: 1; }
+        #lightbox-prev { left: 12px; } #lightbox-next { right: 12px; }
         footer { background: var(--secondary); color: white; padding: 60px 5% 40px; text-align: center; border-top: 5px solid var(--primary); }
         footer strong { font-family: 'Poppins', sans-serif; font-size: 1.1rem; }
         .footer-meta { font-size: 0.8rem; opacity: 0.55; margin-top: 8px; }
@@ -180,17 +183,7 @@
                     <p>為家電產品製造商生產的零件，依 ISO 9001:2015 品質標準生產並進行完整尺寸檢驗。</p>
                 </div>
             </div>
-            <div class="portfolio-card reveal reveal-delay-4" onclick="openLightbox('/Injection-moulding-factory-johor.png')">
-                <div class="portfolio-img-wrap">
-                    <img src="/Injection-moulding-factory-johor.png" alt="馬來西亞新山射出成型工廠 — Industri Nikkoplas 生產現場" loading="lazy" width="600" height="260">
-                    <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
-                </div>
-                <div class="portfolio-label">
-                    <h3>我們的生產基地</h3>
-                    <p>我們位於 Tampoi、新山的廠區——28 台臥式射出成型機，運轉範圍<a href="/zh/capabilities/small-to-mid-tonnage-precision-molding/" style="color:var(--primary);font-weight:700;">50噸至450噸</a>，並配備<a href="/zh/capabilities/one-stop-molding-finishing/" style="color:var(--primary);font-weight:700;">內部二次加工與次組裝產線</a>。</p>
-                </div>
-            </div>
-            <div class="portfolio-card reveal reveal-delay-5" onclick="openLightbox('/precision-base-housing-cover.jpg')">
+            <div class="portfolio-card reveal reveal-delay-4" onclick="openLightbox('/precision-base-housing-cover.jpg')">
                 <div class="portfolio-img-wrap">
                     <img src="/precision-base-housing-cover.jpg" alt="Industri Nikkoplas 精密射出成型底座外殼，含整合式安裝結構" loading="lazy" width="600" height="260">
                     <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
@@ -200,9 +193,9 @@
                     <p>結構性底座與外殼零件，含整合式螺柱、卡扣與安裝結構——依嚴格公差成型，確保次組裝件貼合精準。</p>
                 </div>
             </div>
-            <div class="portfolio-card reveal reveal-delay-6" onclick="openLightbox('/air-filtration-cartridge-assembly.jpg')">
+            <div class="portfolio-card reveal reveal-delay-5" onclick="openGallery(['/air-filtration-cartridge-assembly1.jpg','/air-filtration-cartridge-assembly2.jpg','/air-filtration-cartridge-assembly3.jpg'])">
                 <div class="portfolio-img-wrap">
-                    <img src="/air-filtration-cartridge-assembly.jpg" alt="Industri Nikkoplas 空氣濾網濾芯組件，含成型塑膠外框與蜂巢護網" loading="lazy" width="600" height="260">
+                    <img src="/air-filtration-cartridge-assembly1.jpg" alt="Industri Nikkoplas 空氣濾網濾芯組件，含成型塑膠外框與蜂巢護網" loading="lazy" width="600" height="260">
                     <div class="portfolio-overlay"><span class="overlay-icon">🔍</span></div>
                 </div>
                 <div class="portfolio-label">
@@ -240,7 +233,9 @@
 
 <div id="lightbox" onclick="this.style.display='none'">
     <span id="lightbox-close">×</span>
+    <span id="lightbox-prev" class="lightbox-nav" onclick="event.stopPropagation(); navGallery(-1)" hidden>‹</span>
     <img id="lightbox-img" src="" alt="">
+    <span id="lightbox-next" class="lightbox-nav" onclick="event.stopPropagation(); navGallery(1)" hidden>›</span>
 </div>
 
 <a href="https://wa.me/60167602667" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp 洽詢</a>
@@ -249,7 +244,10 @@
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
-    function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
+    let galleryImages = []; let galleryIndex = 0;
+    function openLightbox(src) { galleryImages = []; document.getElementById('lightbox-prev').hidden = true; document.getElementById('lightbox-next').hidden = true; document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').style.display = 'flex'; }
+    function openGallery(images) { galleryImages = images; galleryIndex = 0; document.getElementById('lightbox-prev').hidden = false; document.getElementById('lightbox-next').hidden = false; document.getElementById('lightbox-img').src = images[0]; document.getElementById('lightbox').style.display = 'flex'; }
+    function navGallery(dir) { if (!galleryImages.length) return; galleryIndex = (galleryIndex + dir + galleryImages.length) % galleryImages.length; document.getElementById('lightbox-img').src = galleryImages[galleryIndex]; }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDDKHMQFDB"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RDDKHMQFDB');</script>
