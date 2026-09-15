@@ -4,6 +4,7 @@
     <loc>https://www.industrinikkoplas.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -13,6 +14,17 @@
     <loc>https://www.industrinikkoplas.com/zh/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -22,6 +34,7 @@
     <loc>https://www.industrinikkoplas.com/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/about/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/about/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
@@ -31,6 +44,17 @@
     <loc>https://www.industrinikkoplas.com/zh/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/about/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/about/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/about/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
@@ -40,6 +64,7 @@
     <loc>https://www.industrinikkoplas.com/capabilities/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -49,6 +74,17 @@
     <loc>https://www.industrinikkoplas.com/zh/capabilities/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/capabilities/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -58,6 +94,7 @@
     <loc>https://www.industrinikkoplas.com/secondary-processes/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/secondary-processes/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/secondary-processes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/secondary-processes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/secondary-processes/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -67,6 +104,17 @@
     <loc>https://www.industrinikkoplas.com/zh/secondary-processes/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/secondary-processes/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/secondary-processes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/secondary-processes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/secondary-processes/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/secondary-processes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/secondary-processes/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/secondary-processes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/secondary-processes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/secondary-processes/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -76,6 +124,7 @@
     <loc>https://www.industrinikkoplas.com/services/silk-screen-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/silk-screen-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/silk-screen-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -85,6 +134,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/silk-screen-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/silk-screen-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/silk-screen-printing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/silk-screen-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/silk-screen-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/silk-screen-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/silk-screen-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -94,6 +154,7 @@
     <loc>https://www.industrinikkoplas.com/services/tempo-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -103,6 +164,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/tempo-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/tempo-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/tempo-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -112,6 +184,7 @@
     <loc>https://www.industrinikkoplas.com/services/2-colour-tempo-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/2-colour-tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -121,6 +194,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/2-colour-tempo-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/2-colour-tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/2-colour-tempo-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -130,6 +214,7 @@
     <loc>https://www.industrinikkoplas.com/services/hot-stamping/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/hot-stamping/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/hot-stamping/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -139,6 +224,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/hot-stamping/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/hot-stamping/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/hot-stamping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/hot-stamping/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/hot-stamping/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/hot-stamping/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/hot-stamping/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -148,6 +244,7 @@
     <loc>https://www.industrinikkoplas.com/services/spray-painting/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/spray-painting/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/spray-painting/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -157,6 +254,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/spray-painting/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/spray-painting/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/spray-painting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/spray-painting/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/spray-painting/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/spray-painting/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/spray-painting/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -166,6 +274,7 @@
     <loc>https://www.industrinikkoplas.com/services/auto-spray-rotary/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -175,6 +284,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/auto-spray-rotary/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/auto-spray-rotary/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/auto-spray-rotary/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -184,6 +304,7 @@
     <loc>https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/semi-auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/semi-auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -193,6 +314,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/semi-auto-spray-rotary/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/semi-auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/semi-auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/semi-auto-spray-rotary/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/semi-auto-spray-rotary/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/semi-auto-spray-rotary/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -202,6 +334,7 @@
     <loc>https://www.industrinikkoplas.com/services/pad-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/pad-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/pad-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -211,6 +344,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/pad-printing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/pad-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/pad-printing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/pad-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/pad-printing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/pad-printing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/pad-printing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -220,6 +364,7 @@
     <loc>https://www.industrinikkoplas.com/services/ultrasonic-welding/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/ultrasonic-welding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/ultrasonic-welding/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -229,6 +374,17 @@
     <loc>https://www.industrinikkoplas.com/zh/services/ultrasonic-welding/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/ultrasonic-welding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/ultrasonic-welding/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/services/ultrasonic-welding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/ultrasonic-welding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/ultrasonic-welding/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/ultrasonic-welding/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -238,6 +394,7 @@
     <loc>https://www.industrinikkoplas.com/machinery/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/machinery/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/machinery/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/machinery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/machinery/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -247,6 +404,17 @@
     <loc>https://www.industrinikkoplas.com/zh/machinery/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/machinery/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/machinery/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/machinery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/machinery/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/machinery/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/machinery/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/machinery/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/machinery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/machinery/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -256,6 +424,7 @@
     <loc>https://www.industrinikkoplas.com/portfolio/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/portfolio/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -265,6 +434,17 @@
     <loc>https://www.industrinikkoplas.com/zh/portfolio/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/portfolio/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/portfolio/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/portfolio/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -274,6 +454,7 @@
     <loc>https://www.industrinikkoplas.com/certifications/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/certifications/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/certifications/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/certifications/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
@@ -283,6 +464,17 @@
     <loc>https://www.industrinikkoplas.com/zh/certifications/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/certifications/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/certifications/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/certifications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/certifications/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/certifications/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>yearly</changefreq>
@@ -292,6 +484,7 @@
     <loc>https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/industries/electronics-telecom-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/industries/electronics-telecom-engineering/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -301,6 +494,17 @@
     <loc>https://www.industrinikkoplas.com/zh/industries/electronics-telecom-engineering/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/industries/electronics-telecom-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/industries/electronics-telecom-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/industries/electronics-telecom-engineering/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/industries/electronics-telecom-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/industries/electronics-telecom-engineering/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -310,6 +514,7 @@
     <loc>https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/one-stop-molding-finishing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/one-stop-molding-finishing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -319,6 +524,17 @@
     <loc>https://www.industrinikkoplas.com/zh/capabilities/one-stop-molding-finishing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/one-stop-molding-finishing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/one-stop-molding-finishing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/capabilities/one-stop-molding-finishing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/one-stop-molding-finishing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/one-stop-molding-finishing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -328,6 +544,7 @@
     <loc>https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -337,6 +554,17 @@
     <loc>https://www.industrinikkoplas.com/zh/capabilities/small-to-mid-tonnage-precision-molding/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.industrinikkoplas.com/ja/capabilities/small-to-mid-tonnage-precision-molding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/capabilities/small-to-mid-tonnage-precision-molding/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/"/>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
