@@ -15,6 +15,7 @@
     <link rel="alternate" hreflang="en" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/">
     <link rel="alternate" hreflang="zh-Hant" href="https://www.industrinikkoplas.com/zh/services/2-colour-tempo-printing/">
     <link rel="alternate" hreflang="ja" href="https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/">
+    <link rel="alternate" hreflang="ko" href="https://www.industrinikkoplas.com/ko/services/2-colour-tempo-printing/">
     <link rel="alternate" hreflang="x-default" href="https://www.industrinikkoplas.com/services/2-colour-tempo-printing/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.industrinikkoplas.com/ja/services/2-colour-tempo-printing/">
@@ -101,6 +102,15 @@
         .whatsapp-float:hover{transform:scale(1.08);background:#128C7E;}
         @media(max-width:768px){header{flex-direction:column;gap:14px;padding:1rem;}nav ul{flex-wrap:wrap;justify-content:center;gap:12px;}}
     </style>
+    <style>
+      .lang-menu { position: relative; list-style: none; }
+      .lang-menu summary { list-style: none; cursor: pointer; white-space: nowrap; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.5px; padding: 8px 10px; border-radius: 6px; color: var(--text, #1e293b); user-select: none; }
+      .lang-menu summary::-webkit-details-marker { display: none; }
+      .lang-menu summary:hover, .lang-menu details[open] summary { color: var(--primary, #005aab); background: rgba(0,90,171,0.06); }
+      .lang-menu ul { position: absolute; top: calc(100% + 6px); right: 0; display: flex !important; flex-direction: column; flex-wrap: nowrap !important; gap: 2px !important; margin: 0; padding: 6px !important; min-width: 110px; list-style: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 8px 24px rgba(15,23,42,0.14); z-index: 1000; }
+      .lang-menu ul a { display: block; white-space: nowrap; text-align: center; padding: 8px 12px !important; }
+    </style>
+    <script>document.addEventListener('click',function(e){document.querySelectorAll('.lang-menu details[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>
 </head>
 <body>
 <header>
@@ -117,8 +127,14 @@
             <li><a href="/ja/portfolio/">実績紹介</a></li>
             <li><a href="/ja/#faq">よくある質問</a></li>
             <li><a href="/ja/#contact" class="cta-btn">お問い合わせ</a></li>
-            <li><a href="/services/2-colour-tempo-printing/" class="lang-switch">EN</a></li>
-            <li><a href="/zh/services/2-colour-tempo-printing/" class="lang-switch">中文</a></li>
+            <li class="lang-menu"><details>
+                <summary aria-label="Language / 言語 / 语言 / 언어">日本語 &#9662;</summary>
+                <ul>
+                  <li><a href="/services/2-colour-tempo-printing/" class="lang-switch" lang="en" hreflang="en">EN</a></li>
+                  <li><a href="/zh/services/2-colour-tempo-printing/" class="lang-switch" lang="zh-Hant" hreflang="zh-Hant">中文</a></li>
+                  <li><a href="/ko/services/2-colour-tempo-printing/" class="lang-switch" lang="ko" hreflang="ko">한국어</a></li>
+                </ul>
+            </details></li>
         </ul>
     </nav>
 </header>
