@@ -1,0 +1,31 @@
+# Industri Nikkoplas Sdn. Bhd.
+
+> ISO 9001:2015 and ISO 14001:2015 certified plastic injection moulding manufacturer in Johor Bahru, Malaysia (since 1988). One-stop service from injection moulding (50T–450T, 28 machines) to secondary processing and sub-assembly for electronics, telecom and engineering-grade plastic components. Resins: PS, ABS, PC.
+
+Contact: bntee@nikkoplas.com | +607-237-0021
+Address: 2B, Jalan Tampoi 2, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor, Malaysia
+Languages: English (default), Traditional Chinese (/zh/), Japanese (/ja/), Korean (/ko/)
+
+## Core pages
+- [Home](https://www.industrinikkoplas.com/): Company overview and service summary
+- [About](https://www.industrinikkoplas.com/about/): History since 1988, facility and team
+- [Certifications](https://www.industrinikkoplas.com/certifications/): ISO 9001:2015 and ISO 14001:2015
+- [Industries: Electronics, Telecom & Engineering](https://www.industrinikkoplas.com/industries/electronics-telecom-engineering/): Connector housings, telecom enclosures, engineering components
+- [Portfolio](https://www.industrinikkoplas.com/portfolio/): Examples of moulded components
+
+## Injection moulding
+- [Capabilities](https://www.industrinikkoplas.com/capabilities/): Overview of moulding, finishing and sub-assembly
+- [One-Stop Moulding, Finishing & Sub-Assembly](https://www.industrinikkoplas.com/capabilities/one-stop-molding-finishing/)
+- [Precision Moulding 50–450T](https://www.industrinikkoplas.com/capabilities/small-to-mid-tonnage-precision-molding/)
+- [Machinery Fleet](https://www.industrinikkoplas.com/machinery/)
+
+## Secondary processing
+- [Secondary Processes overview](https://www.industrinikkoplas.com/secondary-processes/)
+- [Auto Spray (Rotary)](https://www.industrinikkoplas.com/services/auto-spray-rotary/)
+- [Semi Auto Spray (Rotary)](https://www.industrinikkoplas.com/services/semi-auto-spray-rotary/)
+- [Spray Painting](https://www.industrinikkoplas.com/services/spray-painting/)
+- [Tempo (Pad) Printing](https://www.industrinikkoplas.com/services/tempo-printing/)
+- [2 Colour Tempo Printing](https://www.industrinikkoplas.com/services/2-colour-tempo-printing/)
+- [Silk Screen Printing](https://www.industrinikkoplas.com/services/silk-screen-printing/)
+- [Hot Stamping (Vertical)](https://www.industrinikkoplas.com/services/hot-stamping/)
+- [Ultrasonic Welding](https://www.industrinikkoplas.com/services/ultrasonic-welding/)
