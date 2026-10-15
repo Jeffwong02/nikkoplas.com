@@ -66,7 +66,7 @@
       id: 'about',
       q: 'Tell me about Industri Nikkoplas.',
       keywords: ['about', 'company', 'history', 'since when', 'founded', 'experience', 'who are you', 'nikkoplas'],
-      a: 'Industri Nikkoplas Sdn. Bhd. is an ISO 9001:2015 & 14001:2015 certified precision plastic injection moulding manufacturer in Johor Bahru, Malaysia, serving electronics, telecom and engineering OEM customers since 1988 — 35+ years of experience.',
+      a: 'Industri Nikkoplas Sdn. Bhd. is an ISO 9001:2015 & 14001:2015 certified precision plastic injection moulding manufacturer in Johor Bahru, Malaysia, serving electronics, telecom and engineering OEM customers since 1988 — 38+ years of experience.',
       link: { href: '/about/', text: 'Read more about us' }
     },
     {
@@ -157,7 +157,7 @@
       id: 'about',
       q: '請介紹一下 Industri Nikkoplas。',
       keywords: ['關於', '公司', '歷史', '成立', '經驗', '你們是誰', 'nikkoplas'],
-      a: 'Industri Nikkoplas Sdn. Bhd. 是一家 ISO 9001:2015 與 14001:2015 認證的精密塑膠射出成型製造商,位於馬來西亞新山,自 1988 年起服務電子、電信及工程 OEM 客戶 ── 擁有 35 年以上經驗。',
+      a: 'Industri Nikkoplas Sdn. Bhd. 是一家 ISO 9001:2015 與 14001:2015 認證的精密塑膠射出成型製造商,位於馬來西亞新山,自 1988 年起服務電子、電信及工程 OEM 客戶 ── 擁有 38 年以上經驗。',
       link: { href: '/zh/about/', text: '深入了解我們' }
     },
     {
