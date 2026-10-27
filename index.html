@@ -124,7 +124,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
     <style>
       :root {
         --primary: #005aab;
@@ -381,6 +381,10 @@
       }
 
       /* ========== ABOUT STRIP ========== */
+      .quality-band { background: white; padding: 56px 5%; text-align: center; }
+      .quality-band .section-label { margin-bottom: 12px; }
+      .quality-script { font-family: 'Caveat', cursive; font-weight: 700; color: var(--primary); font-size: clamp(2.1rem, 5.5vw, 3.4rem); line-height: 1.25; margin: 0; }
+      .quality-script span { white-space: nowrap; }
       .about-strip {
         background: var(--bg-light);
         display: grid;
@@ -877,6 +881,12 @@
       Located in the Johor&ndash;Singapore SEZ
     </div>
   </div>
+
+  <!-- QUALITY POLICY -->
+  <section class="quality-band" aria-label="Quality Policy">
+    <span class="section-label">Our Quality Policy</span>
+    <p class="quality-script reveal"><span>Reliable Quality,</span> <span>Timely Delivery,</span> <span>Competitive Cost</span></p>
+  </section>
 
   <!-- ABOUT -->
   <div class="about-strip" id="about">
