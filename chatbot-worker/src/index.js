@@ -29,7 +29,7 @@ Guidelines:
 - Never invent certifications, prices, capacities, or capabilities not listed above.`;
 
 const LANG_INSTRUCTIONS = {
-  'zh-Hant': '\n\nRespond in Traditional Chinese (繁體中文), using natural, professional business Chinese as used in Malaysia. Keep the same factual content and page-path suggestions as the guidelines above; do not switch to Simplified Chinese, and do not switch to English unless the user writes to you in English.',
+  'zh-Hant': '\n\nRespond in Traditional Chinese (繁體中文), using natural, professional business Chinese with Taiwan terminology (e.g. 射出成型, 塑膠, 品質, 專案). Keep the same factual content and page-path suggestions as the guidelines above; do not switch to Simplified Chinese, and do not switch to English unless the user writes to you in English.',
 };
 
 const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
